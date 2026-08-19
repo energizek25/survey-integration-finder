@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Survey Integration Finder — one survey, many answers</title>
+<style>
+  :root{
+    --ink:#12303b; --muted:#5b7683; --line:#dde6ea; --bg:#eef3f8; --card:#fff;
+    --accent:#1f6f8b; --accent-soft:#e8f1f4; --warn:#b46b00; --warn-soft:#fdf3e2;
+    --ok:#2f7a4d; --ok-soft:#e7f4ec; --risk:#a8412c; --risk-soft:#fbeae6;
+    /* Blue and orange: the safest pairing for red-green colour blindness,
+       which is by far the most common form. */
+    --orange:#a35a12; --orange-soft:#fdf1e2; --orange-line:#eed6b6;
+    --blue:#1a5f86; --blue-soft:#e6eff6; --blue-line:#c9dcea;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+       color:var(--ink);background:var(--bg)}
+  header{background:var(--accent);color:#fff;padding:30px 24px 26px;text-align:center}
+  header h1{margin:0;font-size:34px;font-weight:700;letter-spacing:-.015em;line-height:1.15}
+  header p{margin:10px auto 0;font-size:16px;opacity:.93;max-width:78ch}
+  header p.tagline{margin:8px auto 0;font-size:21px;font-style:italic;opacity:1;font-weight:400}
+  .wrap{display:flex;gap:22px;padding:22px;align-items:flex-start;max-width:1240px;margin:0 auto}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:8px}
+
+  /* Step headings above each column, so the left-to-right order is explicit. */
+  .steptitle{margin:0 0 10px;padding:11px 15px;border-radius:8px;font-size:17px;font-weight:700;
+             display:flex;align-items:baseline;gap:9px}
+  .steptitle .num{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;opacity:.85}
+  .col-left .steptitle{background:var(--orange-soft);color:var(--orange);border:1px solid var(--orange-line)}
+  .col-right .steptitle{background:var(--blue-soft);color:var(--blue);border:1px solid var(--blue-line)}
+
+  .col-left{width:400px;flex:0 0 400px;position:sticky;top:22px;max-height:calc(100vh - 44px);
+            display:flex;flex-direction:column}
+  .col-right{flex:1;min-width:0}
+  aside{padding:18px;overflow:auto;background:var(--orange-soft);border-color:var(--orange-line)}
+  main{min-width:0}
+  h2{font-size:14.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--orange);
+     margin:20px 0 8px;font-weight:700}
+  h2:first-child{margin-top:0}
+  h2 .opt{text-transform:none;letter-spacing:0;font-weight:400;font-size:13.5px;color:var(--muted)}
+  select,input[type=number],input[type=search]{width:100%;padding:9px 10px;border:1px solid var(--orange-line);
+       border-radius:5px;font:inherit;font-size:15.5px;background:#fff;color:var(--ink)}
+  .checks{max-height:220px;overflow:auto;border:1px solid var(--orange-line);border-radius:5px;
+          padding:7px;background:#fff}
+  .checks label{display:flex;gap:9px;align-items:flex-start;padding:4px 2px;font-size:15.5px;cursor:pointer}
+  .checks input{margin-top:4px;flex:0 0 auto;width:16px;height:16px}
+  .agerow{display:flex;gap:9px;align-items:center}
+  .agerow span{color:var(--muted);font-size:15px}
+  button{font:inherit;cursor:pointer;border-radius:5px;border:1px solid var(--line);background:#fff;padding:7px 12px}
+  button.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .modes{display:flex;gap:7px;margin-bottom:9px}
+  .modes button{flex:1;padding:11px 9px;line-height:1.25;text-align:left;border-color:var(--orange-line)}
+  .modes button strong{display:block;font-size:13.5px;font-weight:700;text-transform:uppercase;letter-spacing:.02em}
+  .modes button small{display:block;font-size:12.5px;color:var(--muted);margin-top:4px}
+  .modes button[aria-pressed=true]{background:#f7dfc0;border-color:var(--orange);color:var(--orange)}
+  .modes button[aria-pressed=true] small{color:var(--orange)}
+  .modehint{font-size:13.5px;color:#6b4415;margin:0 0 4px;padding:9px 11px;background:#fff;
+            border:1px solid var(--orange-line);border-radius:5px;line-height:1.45}
+  .overlap{font-size:11.5px;padding:2px 7px;border-radius:99px;background:#e6f0d9;color:#4a6b21;font-weight:600}
+  i.sci{font-style:italic}
+  .bar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:13px 16px;
+       margin-bottom:12px;background:var(--blue-soft);border-color:var(--blue-line)}
+  .bar .count{font-weight:700;font-size:16px;color:var(--blue)}
+  .bar .count span{font-weight:400;font-size:14px;color:var(--muted)}
+  .bar select{width:auto;font-size:14px;border-color:var(--blue-line)}
+  ul.results{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+  li.card{padding:15px 17px;cursor:pointer;border-left:4px solid var(--blue-line)}
+  li.card:hover{border-color:var(--blue);border-left-color:var(--blue)}
+  .card h3{margin:0 0 3px;font-size:17px}
+  .card .dis{color:var(--blue);font-size:13.5px;font-weight:700;margin-bottom:6px}
+  .card p{margin:0 0 9px;color:var(--muted);font-size:14px}
+  .tags{display:flex;flex-wrap:wrap;gap:5px}
+  .tag{font-size:11.5px;padding:2px 7px;border-radius:99px;background:var(--accent-soft);color:var(--accent)}
+  .tag.grey{background:#eef2f4;color:var(--muted)}
+  .tag.ok{background:var(--ok-soft);color:var(--ok)}
+  .tag.warn{background:var(--warn-soft);color:var(--warn)}
+  .tag.risk{background:var(--risk-soft);color:var(--risk)}
+  .empty{padding:40px 20px;text-align:center;color:var(--muted)}
+  .contribute{margin-top:16px;padding:18px 20px;background:var(--accent-soft);border-color:#cfe1e8}
+  .contribute h3{margin:0 0 5px;font-size:15px;color:var(--accent)}
+  .contribute p{margin:0;font-size:13.5px;color:var(--ink);max-width:80ch}
+  .contribute a{color:var(--accent);font-weight:600}
+  dialog{border:none;border-radius:10px;padding:0;max-width:760px;width:92%;box-shadow:0 18px 50px rgba(0,0,0,.25)}
+  dialog::backdrop{background:rgba(10,30,40,.45)}
+  .dhead{padding:18px 22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:14px}
+  .dhead h3{margin:0 0 3px;font-size:19px}
+  .dbody{padding:6px 22px 22px;max-height:65vh;overflow:auto}
+  .dbody dt{font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-top:14px}
+  .dbody dd{margin:3px 0 0}
+  .dbody a{color:var(--accent)}
+  .note{font-size:12.5px;color:var(--muted);margin-top:6px}
+  .flag{padding:9px 12px;border-radius:6px;font-size:13px;margin-top:12px}
+  .fundingblock{display:inline-block;margin-top:4px;padding:9px 14px;border:1px solid currentColor;
+                font-size:14px;font-weight:700}
+  .flagdate{margin-top:6px;font-size:12.5px;color:var(--muted);font-style:italic}
+  .flag.warn{background:var(--warn-soft);color:var(--warn)}
+  .flag.risk{background:var(--risk-soft);color:var(--risk)}
+  .flag.ok{background:var(--ok-soft);color:var(--ok)}
+  footer{padding:16px 24px;color:var(--muted);font-size:12.5px;text-align:center}
+  #banner{background:#fdf3e2;color:#8a5200;border-bottom:1px solid #f0d9ae;padding:9px 24px;
+          font-size:13px;display:flex;gap:14px;justify-content:center;align-items:center;flex-wrap:wrap}
+  #banner a{color:#8a5200;font-weight:600}
+  @media(max-width:900px){
+    .wrap{flex-direction:column}
+    .col-left{width:100%;flex:none;position:static;max-height:none}
+    header h1{font-size:27px} header p.tagline{font-size:18px}
+  }
+</style>
+</head>
+<body>
+<div id="banner"></div>
+<header>
+  <h1>Survey Integration Finder</h1>
+  <p class="tagline">One survey, many answers</p>
+  <p>Find opportunities to integrate disease assessments — either by joining a survey that is already funded, or by adding assessments to a survey you are about to run.</p>
+</header>
+
+<div class="wrap">
+ <div class="col-left">
+  <h2 class="steptitle"><span class="num">Step 1</span> Set your preferences</h2>
+  <aside class="panel">
+    <div class="modes">
+      <button id="mode-join" aria-pressed="true"><strong>I need data</strong><small>Find a survey to join</small></button>
+      <button id="mode-add" aria-pressed="false"><strong>I'm conducting a survey</strong><small>Find assessments to add</small></button>
+    </div>
+    <p class="modehint" id="modehint"></p>
+
+    <h2>Region</h2>
+    <select id="region"><option value="">All WHO regions</option></select>
+
+    <h2 id="spec-heading">Specimen types</h2>
+    <div class="note" id="spec-note" style="margin-bottom:6px"></div>
+    <div class="checks" id="specimens"></div>
+
+    <h2>Primary sampling unit</h2>
+    <div class="checks" id="psus"></div>
+
+    <h2>Target age range (years)</h2>
+    <div class="agerow">
+      <input type="number" id="agemin" placeholder="min" min="0" step="0.5">
+      <span>to</span>
+      <input type="number" id="agemax" placeholder="max" min="0" step="0.5">
+    </div>
+    <div class="note">Shows surveys whose age range overlaps yours.</div>
+
+    <h2>Search <span class="opt">(optional)</span></h2>
+    <input type="search" id="q" placeholder="disease, survey, antibody…">
+    <div class="note">Narrows the list further — leave empty to see all matches.</div>
+
+    <h2>Options</h2>
+    <label style="display:flex;gap:7px;font-size:13.5px;align-items:flex-start">
+      <input type="checkbox" id="activeonly" style="margin-top:3px">
+      <span>Only surveys with evidence of activity since 2024</span>
+    </label>
+
+    <p style="margin-top:16px"><button id="reset">Reset filters</button></p>
+  </aside>
+ </div>
+
+ <div class="col-right">
+  <h2 class="steptitle"><span class="num">Step 2</span> View the potential surveys</h2>
+  <main>
+    <div class="bar panel">
+      <div class="count"><b id="n">0</b> surveys <span id="of"></span></div>
+      <div><select id="sort" style="width:auto">
+        <option value="disease">Sort by disease</option>
+        <option value="name">Sort by survey name</option>
+        <option value="age">Sort by target age</option>
+      </select></div>
+    </div>
+    <ul class="results" id="results"></ul>
+    <div class="empty panel" id="empty" hidden>
+      No surveys match these filters. Try removing one — specimen and sampling unit together are often too narrow.
+    </div>
+
+    <div class="contribute panel" id="contribute">
+      <h3>Help improve this tool</h3>
+      <p>Spot any errors or surveys that are left off the list?
+         Send your edits and suggestions to
+         <a id="contact-link" href="#">kgass@taskforce.org</a>.</p>
+    </div>
+  </main>
+ </div>
+</div>
+
+<footer id="foot"></footer>
+
+<dialog id="detail">
+  <div class="dhead">
+    <div><h3 id="d-name"></h3><div class="dis" id="d-disease" style="color:var(--accent);font-size:13px;font-weight:600"></div></div>
+    <button onclick="document.getElementById('detail').close()">Close</button>
+  </div>
+  <div class="dbody"><dl id="d-body"></dl></div>
+</dialog>
+
+<script src="data/data.js"></script>
+<script>
+// ---------------------------------------------------------------------------
+// REVIEW BANNER — edit these three lines, or set SHOW_BANNER to false to hide it.
+const SHOW_BANNER   = true;
+const FEEDBACK_EMAIL = "kgass@taskforce.org";   // used by the banner and the box at the foot of the results
+const FEEDBACK_FORM  = "";                 // e.g. a Google Form link (takes priority)
+const BANNER_TEXT    = "Draft for review — all survey records are unverified and should not be cited.";
+// ---------------------------------------------------------------------------
+
+const DATA = window.EXPLORER_DATA || {surveys:[],facets:{}};
+const S = DATA.surveys || [];
+const F = DATA.facets || {};
+const el = id => document.getElementById(id);
+let mode = "join";
+
+// ---------- text formatting ----------
+// Scientific names that should render in italics. Add to this list as needed;
+// abbreviated forms (S. mansoni) and the "S mansoni" typo form are both handled.
+const GENERA = ["Wuchereria","Brugia","Schistosoma","Taenia","Plasmodium","Mycobacterium",
+  "Onchocerca","Loa","Trypanosoma","Leishmania","Aedes","Anopheles","Culex","Mansonia",
+  "Simulium","Chlamydia","Treponema","Vibrio","Strongyloides","Fasciola","Clonorchis",
+  "Opisthorchis","Paragonimus","Echinococcus","Sarcoptes","Ascaris","Trichuris",
+  "Necator","Ancylostoma","Salmonella","Neisseria","Dracunculus"];
+const SPECIES = ["bancrofti","malayi","timori","mansoni","haematobium","japonicum","solium",
+  "falciparum","vivax","tuberculosis","volvulus","loa","cruzi","brucei","gambiense",
+  "rhodesiense","donovani","aegypti","albopictus","trachomatis","pallidum","cholerae",
+  "stercoralis","hepatica","gigantica","sinensis","viverrini","westermani","granulosus",
+  "scabiei","lumbricoides","trichiura","americanus","duodenale","typhi","gonorrhoeae",
+  "medinensis","spp"];
+
+const esc = s => String(s == null ? "" : s)
+  .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+
+function italicise(html){
+  // Genus + species, e.g. "Wuchereria bancrofti"
+  html = html.replace(
+    new RegExp("\\b(" + GENERA.join("|") + ")\\.?\\s+(" + SPECIES.join("|") + ")\\b", "g"),
+    (m) => `<i class="sci">${m}</i>`);
+  // Abbreviated genus + species, e.g. "S. mansoni", "W bancrofti"
+  html = html.replace(
+    new RegExp("\\b([A-Z])\\.?\\s+(" + SPECIES.join("|") + ")\\b", "g"),
+    (m) => `<i class="sci">${m}</i>`);
+  // Bare genus names used alone
+  html = html.replace(new RegExp("\\b(" + GENERA.join("|") + ")\\b(?![^<]*<\\/i>)", "g"),
+    (m) => `<i class="sci">${m}</i>`);
+  // Guard against nesting produced by overlapping matches
+  return html.replace(/<i class="sci">((?:(?!<\/i>).)*?)<i class="sci">/g, '<i class="sci">$1');
+}
+
+// Escape, honour *manual italics*, convert Excel line breaks to <br>, italicise taxa.
+function fmt(v){
+  let s = esc(v);
+  s = s.replace(/\*([^*\n]+)\*/g, '<i>$1</i>');
+  s = italicise(s);
+  return s.replace(/\r?\n/g, "<br>");
+}
+
+// ---------- build filter controls ----------
+(F.regions||[]).forEach(r => el("region").insertAdjacentHTML("beforeend", `<option>${r}</option>`));
+function checkList(node, values){
+  node.innerHTML = values.map(v =>
+    `<label><input type="checkbox" value="${v.replace(/"/g,'&quot;')}"><span>${v}</span></label>`).join("");
+}
+checkList(el("specimens"), F.specimens||[]);
+checkList(el("psus"), F.primary_sampling_units||[]);
+
+const checked = node => [...node.querySelectorAll("input:checked")].map(i => i.value);
+
+// ---------- filtering ----------
+function activeSince2024(s){
+  const f = (s.funding_status||"").toLowerCase();
+  return f.startsWith("active") || f.startsWith("intermittent");
+}
+
+function matches(s){
+  const region = el("region").value;
+  if(region && !(s.regions||[]).includes(region)) return false;
+
+  const specs = checked(el("specimens"));
+  if(specs.length){
+    // "any overlap" — a survey qualifies if it collects at least one selected specimen
+    if(!(s.specimens||[]).some(x => specs.includes(x))) return false;
+  }
+  const psus = checked(el("psus"));
+  if(psus.length){
+    if(!(s.primary_sampling_units||[]).some(x => psus.includes(x))) return false;
+  }
+
+  const lo = parseFloat(el("agemin").value), hi = parseFloat(el("agemax").value);
+  if(!isNaN(lo) || !isNaN(hi)){
+    const a = s.age_min, b = s.age_max;
+    if(a === null && b === null) return false;          // unknown age range can't be matched
+    const alo = a === null ? 0 : a, ahi = b === null ? 200 : b;
+    const ulo = isNaN(lo) ? 0 : lo, uhi = isNaN(hi) ? 200 : hi;
+    if(alo > uhi || ahi < ulo) return false;             // no overlap
+  }
+
+  if(el("activeonly").checked && !activeSince2024(s)) return false;
+
+  const q = el("q").value.trim().toLowerCase();
+  if(q){
+    const hay = [s.name, s.purpose, (s.diseases||[]).join(" "), s.antibody_targets,
+                 s.target_population, (s.specimens||[]).join(" "), s.steward_funder]
+                .join(" ").toLowerCase();
+    if(!hay.includes(q)) return false;
+  }
+  return true;
+}
+
+function fundTag(s){
+  const f = (s.funding_status||"").toLowerCase();
+  if(!f || f.startsWith("not verified")) return {cls:"grey", text:"status unverified"};
+  if(f.startsWith("active")) return {cls:"ok", text:s.funding_status};
+  if(f.startsWith("at risk") || f.startsWith("being phased")) return {cls:"risk", text:s.funding_status};
+  return {cls:"warn", text:s.funding_status};
+}
+
+function ageText(s){
+  if(s.age_min === null && s.age_max === null) return "age not specified";
+  const a = s.age_min === null ? "?" : s.age_min;
+  const b = s.age_max === null ? "?" : (s.age_max >= 100 ? "adult" : s.age_max);
+  return `ages ${a}–${b}`;
+}
+
+// When the user has entered an age range, report how much of it actually overlaps.
+// A one-year touch (their 4-6 against a 6-7 survey) should not look like a full match.
+function overlapTag(s){
+  const lo = parseFloat(el("agemin").value), hi = parseFloat(el("agemax").value);
+  if(isNaN(lo) && isNaN(hi)) return "";
+  const alo = s.age_min === null ? 0 : s.age_min, ahi = s.age_max === null ? 200 : s.age_max;
+  const ulo = isNaN(lo) ? 0 : lo, uhi = isNaN(hi) ? 200 : hi;
+  const olo = Math.max(alo, ulo), ohi = Math.min(ahi, uhi);
+  if(olo > ohi) return "";
+  const label = olo === ohi ? `overlaps at age ${olo} only` : `overlaps ages ${olo}–${ohi >= 100 ? "adult" : ohi}`;
+  return `<span class="overlap">${label}</span>`;
+}
+
+function render(){
+  let list = S.filter(matches);
+  const sort = el("sort").value;
+  list.sort((a,b) => {
+    if(sort === "name") return a.name.localeCompare(b.name);
+    if(sort === "age") return (a.age_min ?? 999) - (b.age_min ?? 999);
+    return (a.diseases[0]||"").localeCompare(b.diseases[0]||"") || a.name.localeCompare(b.name);
+  });
+
+  el("n").textContent = list.length;
+  el("of").textContent = `of ${S.length}` + (mode === "join"
+      ? " — sorted for finding a survey to join"
+      : " — sorted for finding assessments to add");
+
+  el("results").innerHTML = list.map(s => {
+    const ft = fundTag(s);
+    return `<li class="card panel" data-id="${esc(s.id)}">
+      <div class="dis">${fmt((s.diseases||[]).join(" · "))}</div>
+      <h3>${fmt(s.name || "(unnamed survey)")}</h3>
+      <p>${fmt((s.purpose||"").slice(0,190))}${(s.purpose||"").length>190?"…":""}</p>
+      <div class="tags">
+        <span class="tag">${ageText(s)}</span>
+        ${overlapTag(s)}
+        ${(s.specimens||[]).map(x=>`<span class="tag grey">${esc(x)}</span>`).join("")}
+        ${(s.primary_sampling_units||[]).map(x=>`<span class="tag grey">${esc(x)}</span>`).join("")}
+        <span class="tag ${ft.cls}">${esc(ft.text.slice(0,46))}</span>
+      </div></li>`;
+  }).join("");
+
+  el("empty").hidden = list.length > 0;
+  el("results").hidden = list.length === 0;
+}
+
+// ---------- detail view ----------
+// raw = the value already contains trusted HTML (links, notes) and must not be escaped
+function row(term, val, raw){
+  if(!val) return "";
+  return `<dt>${esc(term)}</dt><dd>${raw ? val : fmt(val)}</dd>`;
+}
+function openDetail(id){
+  const s = S.find(x => x.id === id);
+  if(!s) return;
+  el("d-name").innerHTML = fmt(s.name || "(unnamed survey)");
+  el("d-disease").innerHTML = fmt((s.diseases||[]).join(" · "));
+  const ft = fundTag(s);
+  const links = (s.resources||[]).filter(r=>r.url)
+    .map(r => `<div><a href="${esc(r.url)}" target="_blank" rel="noopener">${fmt(r.title)}</a></div>`).join("");
+  // Funding status sits at the foot of the record, under a heading that matches the
+  // other field labels: heading, then the status on its own in a coloured box, then
+  // the date it was last checked.
+  const MONTHS = {Jan:"January", Feb:"February", Mar:"March", Apr:"April", May:"May",
+                  Jun:"June", Jul:"July", Aug:"August", Sep:"September", Sept:"September",
+                  Oct:"October", Nov:"November", Dec:"December"};
+  const longDate = d => String(d||"").replace(/\b([A-Z][a-z]{2,3})\b/g, m => MONTHS[m] || m);
+
+  const funding =
+    row("Funding status",
+        `<div class="flag fundingblock ${ft.cls==='grey'?'warn':ft.cls}">${esc(ft.text)}</div>` +
+        (s.evidence_checked && s.evidence_checked !== "-"
+           ? `<div class="flagdate">Last checked: ${esc(longDate(s.evidence_checked))}</div>` : ""),
+        true);
+
+  el("d-body").innerHTML =
+    row("Purpose", s.purpose)
+    + row("WHO regions", (s.regions||[]).join(", "))
+    + row("Survey area", s.survey_area)
+    + row("Primary sampling unit", (s.primary_sampling_units||[]).join("; "))
+    + row("Secondary sampling unit", s.secondary_sampling_unit)
+    + row("Sample size", s.sample_size)
+    + row("Target population",
+          `${fmt(s.target_population||"")} <span class="note">(${ageText(s)})</span>`, true)
+    + row("Specimens collected", (s.specimens||[]).join("; "))
+    + row("Diagnostics", s.diagnostics)
+    + row("Other data collected", s.additional_data)
+    + row("Frequency", s.frequency)
+    + row("Timing considerations", s.timing_considerations)
+    + row("Serology available", s.serology_available)
+    + row("Antibody / antigen targets", s.antibody_targets)
+    + row("Programmatic indicator", s.indicator)
+    + row("Decision rule", s.decision_rule)
+    + row("Steward / funder", s.steward_funder)
+    + row("Guidance and documentation", links, true)
+    + funding;
+  el("detail").showModal();
+}
+el("results").addEventListener("click", e => {
+  const li = e.target.closest("li.card");
+  if(li) openDetail(li.dataset.id);
+});
+
+// ---------- wiring ----------
+["region","agemin","agemax","q","sort","activeonly"].forEach(id =>
+  el(id).addEventListener("input", render));
+["specimens","psus"].forEach(id => el(id).addEventListener("change", render));
+el("reset").addEventListener("click", () => {
+  el("region").value = ""; el("agemin").value = ""; el("agemax").value = "";
+  el("q").value = ""; el("activeonly").checked = false;
+  document.querySelectorAll(".checks input").forEach(i => i.checked = false);
+  render();
+});
+const MODES = {
+  join: {
+    hint: "Showing surveys that may lend themselves well to integrating your assessment needs. Only surveys with evidence of recent activity are included, since an unfunded survey is no use as a host.",
+    specHeading: "Specimen types you can use",
+    specNote: "Which specimens would satisfy your assessment? Check all that apply.",
+    activeDefault: true,
+  },
+  add: {
+    hint: "Showing assessments you could add to your own survey to improve the public health value, based on the target population, endemic region and specimen type collected.",
+    specHeading: "Specimen types you plan to collect",
+    specNote: "What will your survey already be collecting? Check all that apply.",
+    activeDefault: false,
+  },
+};
+function setMode(m){
+  mode = m;
+  const cfg = MODES[m];
+  el("mode-join").setAttribute("aria-pressed", m === "join");
+  el("mode-add").setAttribute("aria-pressed", m === "add");
+  el("modehint").textContent = cfg.hint;
+  el("spec-heading").textContent = cfg.specHeading;
+  el("spec-note").textContent = cfg.specNote;
+  el("activeonly").checked = cfg.activeDefault;
+  render();
+}
+el("mode-join").addEventListener("click", () => setMode("join"));
+el("mode-add").addEventListener("click", () => setMode("add"));
+
+// ---------- contribute box ----------
+// Built from FEEDBACK_EMAIL so the address only ever needs changing in one place.
+(function(){
+  const a = el("contact-link");
+  a.textContent = FEEDBACK_EMAIL;
+  a.href = "mailto:" + FEEDBACK_EMAIL +
+    "?subject=" + encodeURIComponent("Survey Integration Finder — edits and suggestions");
+})();
+
+// ---------- review banner ----------
+if(SHOW_BANNER){
+  const link = FEEDBACK_FORM
+    ? `<a href="${FEEDBACK_FORM}" target="_blank" rel="noopener">Send feedback</a>`
+    : (FEEDBACK_EMAIL
+        ? `<a href="mailto:${FEEDBACK_EMAIL}?subject=Survey%20Integration%20Finder%20feedback">Send feedback</a>`
+        : "");
+  el("banner").innerHTML = `<span>${BANNER_TEXT}</span>${link}`;
+} else {
+  el("banner").remove();
+}
+
+el("foot").textContent =
+  `${DATA.survey_count||S.length} surveys · data generated ${DATA.generated||""} from ${DATA.source_workbook||""} · all records are drafts pending technical review`;
+
+setMode("join");
+</script>
+</body>
+</html>
