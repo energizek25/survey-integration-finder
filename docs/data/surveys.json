@@ -38,7 +38,7 @@
     "indicator": "Microfilaraemia and/or antigenaemia prevalence",
     "decision_rule": "EU eligible to proceed to TAS/IIS if prevalence below target threshold at all sites",
     "steward_funder": "WHO/GPELF/RLMF",
-    "funding_status": "Active - country dependent",
+    "funding_status": "Active, but depends on individual country and partner funding",
     "last_known_implementation": "",
     "evidence_checked": "",
     "resources": [
@@ -89,7 +89,7 @@
     "indicator": "Antigenaemia prevalence (or antibody in Brugia areas)",
     "decision_rule": "Stop MDA ('pass') if number of antigen (W. bancrofti) or antibody (Brugia spp.) positives is equal to or below the critical cutoff.",
     "steward_funder": "WHO/GPELF/RLMF",
-    "funding_status": "Active - country dependent",
+    "funding_status": "Active, but depends on individual country and partner funding",
     "last_known_implementation": "",
     "evidence_checked": "",
     "resources": [
@@ -143,7 +143,7 @@
     "indicator": "Microfilaraemia prevalence",
     "decision_rule": "Stop IDA MDA if microfilaremia prevalence <1%",
     "steward_funder": "NGO implementing partner",
-    "funding_status": "Active - country dependent",
+    "funding_status": "Active, but depends on individual country and partner funding",
     "last_known_implementation": "",
     "evidence_checked": "",
     "resources": [
@@ -199,7 +199,7 @@
     "indicator": "Prevalence of infection (any intensity)",
     "decision_rule": "Continue, reduce or stop MDA relative to the 10% treatment threshold",
     "steward_funder": "WHO/ESPEN",
-    "funding_status": "Uncertain",
+    "funding_status": "Active, but limited to African settings and dependent on partner funding",
     "last_known_implementation": "",
     "evidence_checked": "",
     "resources": [
@@ -250,7 +250,7 @@
     "indicator": "",
     "decision_rule": "",
     "steward_funder": "WHO/ESPEN",
-    "funding_status": "Uncertain",
+    "funding_status": "Active, but limited to African settings and dependent on partner funding",
     "last_known_implementation": "",
     "evidence_checked": "",
     "resources": [],
@@ -300,7 +300,7 @@
     "indicator": "Parasite prevalence in children <5; ITN ownership and use; IPTp and ACT coverage",
     "decision_rule": "",
     "steward_funder": "WHO GMP / Global Fund / national malaria programmes (historically implemented via the DHS Program)",
-    "funding_status": "Active - limited via DHS Program",
+    "funding_status": "Active, but limited because typically tied to DHS surveys",
     "last_known_implementation": "MIS is delivered through the DHS Program, which was stabilized by a US$39m Gates Foundation grant (July 2025, three years, ending 2028) plus ~US$4m from Bloomberg Philanthropies after USAID terminated the ICF contract; continuation confirmed 23 January 2026. Individual country surveys are separately funded by governments, the Global Fund, World Bank, UNICEF and UNFPA.",
     "evidence_checked": "Aug 2026",
     "resources": [
@@ -352,7 +352,7 @@
     "indicator": "Seroprevalence curves / force of infection",
     "decision_rule": "If seroprevalence is >70% then vaccination is recommended; 50-70% seroprevalence is a gray zone; <50% vaccination is not recommended",
     "steward_funder": "WHO IVB",
-    "funding_status": "Active - driven by vaccine introduction",
+    "funding_status": "Active, driven by vaccine introduction decisions",
     "last_known_implementation": "WHO's 2023 recommendation and May 2024 position paper on TAK-003 (Qdenga) direct countries to use seroprevalence to decide on introduction, with a suggested ~60% threshold in the target age group. National/subnational seroprevalence mapping is collated at arbomap.org. Demand is tied to vaccine introduction planning, so activity follows countries considering TAK-003.",
     "evidence_checked": "Aug 2026",
     "resources": [
@@ -408,7 +408,7 @@
     "indicator": "Proportion of the population with protective antibodies (immunity)",
     "decision_rule": "To successfully sustain the interruption of measles transmission, the WHO estimates that at least 95% immunity must be achieved and maintained across all age groups, geographical regions, and subgroups.",
     "steward_funder": "WHO IVB / Gavi",
-    "funding_status": "Active - ad hoc",
+    "funding_status": "Active, though largely ad hoc and commissioned on a case-by-case basis",
     "last_known_implementation": "Gavi's measles/rubella investment for 2021-2025 totals US$604m, but it funds vaccine procurement, campaigns and the Measles & Rubella Partnership Outbreak Response Fund (~US$11m to six countries in 2024) - not serosurveys. Serosurveys are commissioned case by case: Belgrade May 2024; China 2024 round; a Gambia measles/rubella immunity-gap serosurvey protocol published 2025. Treat funding as opportunistic and country-driven.",
     "evidence_checked": "Aug 2026",
     "resources": [
@@ -450,18 +450,18 @@
       "School-aged children (5-14)"
     ],
     "specimens": [
-      "None"
+      "None (questionnaire only)"
     ],
     "diagnostics": "None",
     "additional_data": "Verbal history of vaccination coverage; visual inspection of vaccination card",
     "frequency": "Conducted on an as-needed or event-driven basis; for example, post-campaign VCCS should take place immediately following the supplemental immunization activity.",
     "timing_considerations": "Post-campaign surveys conducted immediately after a supplementary immunization activity; routine coverage surveys as needed",
     "serology_available": "No",
-    "antibody_targets": "",
+    "antibody_targets": "NA",
     "indicator": "Estimate of vaccine coverage",
     "decision_rule": "Vaccine dependent",
     "steward_funder": "WHO IVB / Gavi / UNICEF",
-    "funding_status": "Active - WHO/UNICEF/Gavi",
+    "funding_status": "Active, with support from WHO/UNICEF/Gavi",
     "last_known_implementation": "",
     "evidence_checked": "-",
     "resources": [
@@ -506,14 +506,14 @@
       "Adults (20+)"
     ],
     "specimens": [
-      "None"
+      "None (questionnaire only)"
     ],
     "diagnostics": "None",
     "additional_data": "Verbal questionnaire; Immunization card (visual inspection); Anthropometry measurements of child; dried blood spots have been added to some recent surveys, typically on a subsample",
     "frequency": "Every 3-5 years",
     "timing_considerations": "",
     "serology_available": "Occasionally (DBS sub-samples)",
-    "antibody_targets": "",
+    "antibody_targets": "NA",
     "indicator": "Zero-dose children, vaccine coverage gaps,",
     "decision_rule": "",
     "steward_funder": "UNICEF",
@@ -564,18 +564,18 @@
       "Adults (20+)"
     ],
     "specimens": [
-      "None"
+      "None (questionnaire only)"
     ],
     "diagnostics": "None",
     "additional_data": "Demographic information; treatment coverage questionnaire",
     "frequency": "",
     "timing_considerations": "Conducted within days to weeks after the MDA round, while recall is reliable",
     "serology_available": "No",
-    "antibody_targets": "",
+    "antibody_targets": "NA",
     "indicator": "Surveyed treatment coverage; reasons for non-compliance",
     "decision_rule": "Coverage below the programmatic threshold (typically 65-80% depending on disease) triggers corrective action",
     "steward_funder": "WHO/ESPEN",
-    "funding_status": "Active - country dependent",
+    "funding_status": "Active, but depends on individual country and partner funding",
     "last_known_implementation": "",
     "evidence_checked": "",
     "resources": [],
@@ -666,7 +666,7 @@
     "indicator": "Onchocerca seroprevalence",
     "decision_rule": "MDA indicated where Ov16 seroprevalence exceeds the elimination-mapping threshold",
     "steward_funder": "WHO/ESPEN",
-    "funding_status": "Active - country dependent",
+    "funding_status": "Active, but depends on individual country and partner funding",
     "last_known_implementation": "",
     "evidence_checked": "",
     "resources": [
@@ -714,7 +714,7 @@
     "indicator": "Onchocerca seroprevalence",
     "decision_rule": "Stop MDA if Ov16 seroprevalence <0.1% (upper bound of 95% CI)",
     "steward_funder": "WHO/ESPEN",
-    "funding_status": "Active - country dependent",
+    "funding_status": "Active, but depends on individual country and partner funding",
     "last_known_implementation": "",
     "evidence_checked": "",
     "resources": [],
@@ -755,11 +755,11 @@
     "frequency": "Guided by WHO decision trees and programme needs; typically after 5+ rounds of MDA",
     "timing_considerations": ">6 months after the most recent MDA round",
     "serology_available": "No (stool-based; serology under development)",
-    "antibody_targets": "",
+    "antibody_targets": "NA",
     "indicator": "Prevalence of any STH infection and of moderate-to-heavy intensity infection",
     "decision_rule": "Treatment frequency increased, maintained or reduced against the 20% and 2% prevalence thresholds",
     "steward_funder": "WHO/ESPEN",
-    "funding_status": "Active - country dependent",
+    "funding_status": "Active, but depends on individual country and partner funding",
     "last_known_implementation": "",
     "evidence_checked": "",
     "resources": [],
@@ -856,7 +856,7 @@
     "indicator": "TF prevalence in children 1-9 years; TT prevalence in adults 15+",
     "decision_rule": "Stop MDA when TF <5% in children 1-9; elimination threshold TT <0.2% in adults 15+",
     "steward_funder": "Tropical Data / WHO / ITI",
-    "funding_status": "Active - country dependent",
+    "funding_status": "Active, closely coordinated by Tropical Data and International Trachoma Initiative and dependent on partner funding",
     "last_known_implementation": "",
     "evidence_checked": "",
     "resources": [
@@ -909,7 +909,7 @@
     "indicator": "",
     "decision_rule": "",
     "steward_funder": "WHO/ESPEN; COR-NTD",
-    "funding_status": "Active - country dependent",
+    "funding_status": "Active, but depends on individual country and partner funding",
     "last_known_implementation": "",
     "evidence_checked": "",
     "resources": [],
@@ -952,7 +952,7 @@
     "indicator": "Ov16 seroprevalence",
     "decision_rule": "Proceed to Stop MDA survey if below threshold",
     "steward_funder": "WHO/ESPEN",
-    "funding_status": "Active - country dependent",
+    "funding_status": "Active, but depends on individual country and partner funding",
     "last_known_implementation": "Act to End NTDs East/West ran through 2026 (East extended with +$125M, >$420M over 8 years) before USAID's flagship NTD programme was terminated; commentary in early 2026 warns this risks widening data and treatment gaps. WHO/ESPEN and the END Fund continue, but survey funding is the most exposed line.",
     "evidence_checked": "Aug 2026",
     "resources": [],
@@ -1275,14 +1275,14 @@
       "Adolescents (15-19)"
     ],
     "specimens": [
-      "None"
+      "None (questionnaire only)"
     ],
     "diagnostics": "None (self-administered questionnaire)",
     "additional_data": "Verbal questionnaire",
     "frequency": "Every 4-5 years",
     "timing_considerations": "",
     "serology_available": "No",
-    "antibody_targets": "",
+    "antibody_targets": "NA",
     "indicator": "",
     "decision_rule": "",
     "steward_funder": "WHO / CDC",
@@ -1327,14 +1327,14 @@
       "School-aged children (5-14)"
     ],
     "specimens": [
-      "None"
+      "None (questionnaire only)"
     ],
     "diagnostics": "None (self-administered questionnaire)",
     "additional_data": "Verbal questionnaire",
     "frequency": "Every 4-5 years",
     "timing_considerations": "",
     "serology_available": "No",
-    "antibody_targets": "",
+    "antibody_targets": "NA",
     "indicator": "",
     "decision_rule": "",
     "steward_funder": "WHO / CDC Foundation",

@@ -1,7 +1,8 @@
 window.EXPLORER_DATA = {
-  "generated": "2026-08-19",
-  "source_workbook": "Integrated_Survey_Catalog_TEMPLATE_v6.xlsx",
+  "generated": "2026-08-20",
+  "source_workbook": "Integrated_Survey_Catalog_TEMPLATE_v7.xlsx",
   "survey_count": 30,
+  "disease_count": 49,
   "surveys": [
     {
       "id": "lymphatic-filariasis-epidemiological-mon",
@@ -42,7 +43,7 @@ window.EXPLORER_DATA = {
       "indicator": "Microfilaraemia and/or antigenaemia prevalence",
       "decision_rule": "EU eligible to proceed to TAS/IIS if prevalence below target threshold at all sites",
       "steward_funder": "WHO/GPELF/RLMF",
-      "funding_status": "Active - country dependent",
+      "funding_status": "Active, but depends on individual country and partner funding",
       "last_known_implementation": "",
       "evidence_checked": "",
       "resources": [
@@ -93,7 +94,7 @@ window.EXPLORER_DATA = {
       "indicator": "Antigenaemia prevalence (or antibody in Brugia areas)",
       "decision_rule": "Stop MDA ('pass') if number of antigen (W. bancrofti) or antibody (Brugia spp.) positives is equal to or below the critical cutoff.",
       "steward_funder": "WHO/GPELF/RLMF",
-      "funding_status": "Active - country dependent",
+      "funding_status": "Active, but depends on individual country and partner funding",
       "last_known_implementation": "",
       "evidence_checked": "",
       "resources": [
@@ -147,7 +148,7 @@ window.EXPLORER_DATA = {
       "indicator": "Microfilaraemia prevalence",
       "decision_rule": "Stop IDA MDA if microfilaremia prevalence <1%",
       "steward_funder": "NGO implementing partner",
-      "funding_status": "Active - country dependent",
+      "funding_status": "Active, but depends on individual country and partner funding",
       "last_known_implementation": "",
       "evidence_checked": "",
       "resources": [
@@ -203,7 +204,7 @@ window.EXPLORER_DATA = {
       "indicator": "Prevalence of infection (any intensity)",
       "decision_rule": "Continue, reduce or stop MDA relative to the 10% treatment threshold",
       "steward_funder": "WHO/ESPEN",
-      "funding_status": "Uncertain",
+      "funding_status": "Active, but limited to African settings and dependent on partner funding",
       "last_known_implementation": "",
       "evidence_checked": "",
       "resources": [
@@ -254,7 +255,7 @@ window.EXPLORER_DATA = {
       "indicator": "",
       "decision_rule": "",
       "steward_funder": "WHO/ESPEN",
-      "funding_status": "Uncertain",
+      "funding_status": "Active, but limited to African settings and dependent on partner funding",
       "last_known_implementation": "",
       "evidence_checked": "",
       "resources": [],
@@ -304,7 +305,7 @@ window.EXPLORER_DATA = {
       "indicator": "Parasite prevalence in children <5; ITN ownership and use; IPTp and ACT coverage",
       "decision_rule": "",
       "steward_funder": "WHO GMP / Global Fund / national malaria programmes (historically implemented via the DHS Program)",
-      "funding_status": "Active - limited via DHS Program",
+      "funding_status": "Active, but limited because typically tied to DHS surveys",
       "last_known_implementation": "MIS is delivered through the DHS Program, which was stabilized by a US$39m Gates Foundation grant (July 2025, three years, ending 2028) plus ~US$4m from Bloomberg Philanthropies after USAID terminated the ICF contract; continuation confirmed 23 January 2026. Individual country surveys are separately funded by governments, the Global Fund, World Bank, UNICEF and UNFPA.",
       "evidence_checked": "Aug 2026",
       "resources": [
@@ -356,7 +357,7 @@ window.EXPLORER_DATA = {
       "indicator": "Seroprevalence curves / force of infection",
       "decision_rule": "If seroprevalence is >70% then vaccination is recommended; 50-70% seroprevalence is a gray zone; <50% vaccination is not recommended",
       "steward_funder": "WHO IVB",
-      "funding_status": "Active - driven by vaccine introduction",
+      "funding_status": "Active, driven by vaccine introduction decisions",
       "last_known_implementation": "WHO's 2023 recommendation and May 2024 position paper on TAK-003 (Qdenga) direct countries to use seroprevalence to decide on introduction, with a suggested ~60% threshold in the target age group. National/subnational seroprevalence mapping is collated at arbomap.org. Demand is tied to vaccine introduction planning, so activity follows countries considering TAK-003.",
       "evidence_checked": "Aug 2026",
       "resources": [
@@ -412,7 +413,7 @@ window.EXPLORER_DATA = {
       "indicator": "Proportion of the population with protective antibodies (immunity)",
       "decision_rule": "To successfully sustain the interruption of measles transmission, the WHO estimates that at least 95% immunity must be achieved and maintained across all age groups, geographical regions, and subgroups.",
       "steward_funder": "WHO IVB / Gavi",
-      "funding_status": "Active - ad hoc",
+      "funding_status": "Active, though largely ad hoc and commissioned on a case-by-case basis",
       "last_known_implementation": "Gavi's measles/rubella investment for 2021-2025 totals US$604m, but it funds vaccine procurement, campaigns and the Measles & Rubella Partnership Outbreak Response Fund (~US$11m to six countries in 2024) - not serosurveys. Serosurveys are commissioned case by case: Belgrade May 2024; China 2024 round; a Gambia measles/rubella immunity-gap serosurvey protocol published 2025. Treat funding as opportunistic and country-driven.",
       "evidence_checked": "Aug 2026",
       "resources": [
@@ -461,11 +462,11 @@ window.EXPLORER_DATA = {
       "frequency": "Conducted on an as-needed or event-driven basis; for example, post-campaign VCCS should take place immediately following the supplemental immunization activity.",
       "timing_considerations": "Post-campaign surveys conducted immediately after a supplementary immunization activity; routine coverage surveys as needed",
       "serology_available": "No",
-      "antibody_targets": "",
+      "antibody_targets": "NA",
       "indicator": "Estimate of vaccine coverage",
       "decision_rule": "Vaccine dependent",
       "steward_funder": "WHO IVB / Gavi / UNICEF",
-      "funding_status": "Active - WHO/UNICEF/Gavi",
+      "funding_status": "Active, with support from WHO/UNICEF/Gavi",
       "last_known_implementation": "",
       "evidence_checked": "-",
       "resources": [
@@ -517,7 +518,7 @@ window.EXPLORER_DATA = {
       "frequency": "Every 3-5 years",
       "timing_considerations": "",
       "serology_available": "Occasionally (DBS sub-samples)",
-      "antibody_targets": "",
+      "antibody_targets": "NA",
       "indicator": "Zero-dose children, vaccine coverage gaps,",
       "decision_rule": "",
       "steward_funder": "UNICEF",
@@ -575,11 +576,11 @@ window.EXPLORER_DATA = {
       "frequency": "",
       "timing_considerations": "Conducted within days to weeks after the MDA round, while recall is reliable",
       "serology_available": "No",
-      "antibody_targets": "",
+      "antibody_targets": "NA",
       "indicator": "Surveyed treatment coverage; reasons for non-compliance",
       "decision_rule": "Coverage below the programmatic threshold (typically 65-80% depending on disease) triggers corrective action",
       "steward_funder": "WHO/ESPEN",
-      "funding_status": "Active - country dependent",
+      "funding_status": "Active, but depends on individual country and partner funding",
       "last_known_implementation": "",
       "evidence_checked": "",
       "resources": [],
@@ -670,7 +671,7 @@ window.EXPLORER_DATA = {
       "indicator": "Onchocerca seroprevalence",
       "decision_rule": "MDA indicated where Ov16 seroprevalence exceeds the elimination-mapping threshold",
       "steward_funder": "WHO/ESPEN",
-      "funding_status": "Active - country dependent",
+      "funding_status": "Active, but depends on individual country and partner funding",
       "last_known_implementation": "",
       "evidence_checked": "",
       "resources": [
@@ -718,7 +719,7 @@ window.EXPLORER_DATA = {
       "indicator": "Onchocerca seroprevalence",
       "decision_rule": "Stop MDA if Ov16 seroprevalence <0.1% (upper bound of 95% CI)",
       "steward_funder": "WHO/ESPEN",
-      "funding_status": "Active - country dependent",
+      "funding_status": "Active, but depends on individual country and partner funding",
       "last_known_implementation": "",
       "evidence_checked": "",
       "resources": [],
@@ -759,11 +760,11 @@ window.EXPLORER_DATA = {
       "frequency": "Guided by WHO decision trees and programme needs; typically after 5+ rounds of MDA",
       "timing_considerations": ">6 months after the most recent MDA round",
       "serology_available": "No (stool-based; serology under development)",
-      "antibody_targets": "",
+      "antibody_targets": "NA",
       "indicator": "Prevalence of any STH infection and of moderate-to-heavy intensity infection",
       "decision_rule": "Treatment frequency increased, maintained or reduced against the 20% and 2% prevalence thresholds",
       "steward_funder": "WHO/ESPEN",
-      "funding_status": "Active - country dependent",
+      "funding_status": "Active, but depends on individual country and partner funding",
       "last_known_implementation": "",
       "evidence_checked": "",
       "resources": [],
@@ -860,7 +861,7 @@ window.EXPLORER_DATA = {
       "indicator": "TF prevalence in children 1-9 years; TT prevalence in adults 15+",
       "decision_rule": "Stop MDA when TF <5% in children 1-9; elimination threshold TT <0.2% in adults 15+",
       "steward_funder": "Tropical Data / WHO / ITI",
-      "funding_status": "Active - country dependent",
+      "funding_status": "Active, closely coordinated by Tropical Data and International Trachoma Initiative and dependent on partner funding",
       "last_known_implementation": "",
       "evidence_checked": "",
       "resources": [
@@ -913,7 +914,7 @@ window.EXPLORER_DATA = {
       "indicator": "",
       "decision_rule": "",
       "steward_funder": "WHO/ESPEN; COR-NTD",
-      "funding_status": "Active - country dependent",
+      "funding_status": "Active, but depends on individual country and partner funding",
       "last_known_implementation": "",
       "evidence_checked": "",
       "resources": [],
@@ -956,7 +957,7 @@ window.EXPLORER_DATA = {
       "indicator": "Ov16 seroprevalence",
       "decision_rule": "Proceed to Stop MDA survey if below threshold",
       "steward_funder": "WHO/ESPEN",
-      "funding_status": "Active - country dependent",
+      "funding_status": "Active, but depends on individual country and partner funding",
       "last_known_implementation": "Act to End NTDs East/West ran through 2026 (East extended with +$125M, >$420M over 8 years) before USAID's flagship NTD programme was terminated; commentary in early 2026 warns this risks widening data and treatment gaps. WHO/ESPEN and the END Fund continue, but survey funding is the most exposed line.",
       "evidence_checked": "Aug 2026",
       "resources": [],
@@ -1286,7 +1287,7 @@ window.EXPLORER_DATA = {
       "frequency": "Every 4-5 years",
       "timing_considerations": "",
       "serology_available": "No",
-      "antibody_targets": "",
+      "antibody_targets": "NA",
       "indicator": "",
       "decision_rule": "",
       "steward_funder": "WHO / CDC",
@@ -1338,7 +1339,7 @@ window.EXPLORER_DATA = {
       "frequency": "Every 4-5 years",
       "timing_considerations": "",
       "serology_available": "No",
-      "antibody_targets": "",
+      "antibody_targets": "NA",
       "indicator": "",
       "decision_rule": "",
       "steward_funder": "WHO / CDC Foundation",
@@ -1571,6 +1572,1645 @@ window.EXPLORER_DATA = {
       "source_row": 31
     }
   ],
+  "diseases": [
+    {
+      "name": "Bacterial Meningitis",
+      "regions": [
+        "AFRO",
+        "AMRO",
+        "EMRO",
+        "SEARO",
+        "WPRO"
+      ],
+      "specimens": [
+        "Cerebrospinal fluid",
+        "Venous blood"
+      ],
+      "diagnostics": [
+        "Lumbar puncture with Cerebrospinal fluid microscopy, culture and PCR; blood culture. Sentinel paediatric surveillance focuses on children under 5; epidemic surveillance in the meningitis belt covers all ages."
+      ],
+      "age_min": 0.0,
+      "age_max": 100.0,
+      "population_bands": [
+        "Infants (<1)",
+        "Preschool-aged children (1-4)",
+        "School-aged children (5-14)",
+        "Adolescents (15-19)",
+        "Adults (20+)"
+      ],
+      "decision_areas": [],
+      "antibody_targets": [],
+      "existing_surveys": [],
+      "resources": [],
+      "source_row": 2
+    },
+    {
+      "name": "Buruli Ulcer",
+      "regions": [
+        "AFRO",
+        "WPRO"
+      ],
+      "specimens": [
+        "Visual/clinical exam",
+        "Wound swab",
+        "Fine needle aspirate"
+      ],
+      "diagnostics": [
+        "Standardized clinical algorithms with photographic reference; PCR or serology for confirmation of specific diseases",
+        "Clinical examination followed by IS2404 PCR confirmation"
+      ],
+      "age_min": 5.0,
+      "age_max": 15.0,
+      "population_bands": [
+        "School-aged children (5-14)"
+      ],
+      "decision_areas": [
+        "District or health district",
+        "District"
+      ],
+      "antibody_targets": [
+        "Yaws: Tp15, Tp17, TmpA"
+      ],
+      "existing_surveys": [
+        "Integrated skin NTD survey",
+        "Buruli ulcer active case detection survey"
+      ],
+      "resources": [
+        {
+          "title": "Integrated skin NTD survey: WHO skin NTDs strategic framework",
+          "url": "https://www.who.int/publications/i/item/9789240051423"
+        }
+      ],
+      "source_row": 3
+    },
+    {
+      "name": "Cervical Cancer",
+      "regions": [
+        "AFRO",
+        "AMRO",
+        "EMRO",
+        "SEARO",
+        "WPRO"
+      ],
+      "specimens": [
+        "Cervical or vaginal swab"
+      ],
+      "diagnostics": [
+        "HPV DNA testing of clinician- or self-collected samples (WHO-preferred); visual inspection with acetic acid (VIA) or cytology where HPV testing is unavailable."
+      ],
+      "age_min": 30.0,
+      "age_max": 49.0,
+      "population_bands": [
+        "Adults (20+)"
+      ],
+      "decision_areas": [],
+      "antibody_targets": [],
+      "existing_surveys": [],
+      "resources": [],
+      "source_row": 4
+    },
+    {
+      "name": "Chagas",
+      "regions": [
+        "AMRO"
+      ],
+      "specimens": [
+        "Finger prick blood",
+        "Venous blood"
+      ],
+      "diagnostics": [
+        "Two independent serological tests (ELISA, rapid tests); PCR in congenital cases"
+      ],
+      "age_min": 0.0,
+      "age_max": 100.0,
+      "population_bands": [
+        "Infants (<1)",
+        "Preschool-aged children (1-4)",
+        "School-aged children (5-14)",
+        "Adolescents (15-19)",
+        "Adults (20+)"
+      ],
+      "decision_areas": [
+        "National or sub-national"
+      ],
+      "antibody_targets": [],
+      "existing_surveys": [
+        "Chagas disease seroprevalence survey"
+      ],
+      "resources": [],
+      "source_row": 5
+    },
+    {
+      "name": "Chikungunya",
+      "regions": [
+        "AFRO",
+        "AMRO",
+        "SEARO",
+        "WPRO"
+      ],
+      "specimens": [
+        "Venous blood"
+      ],
+      "diagnostics": [
+        "RT-PCR during the acute phase (first ~7 days); IgM ELISA thereafter."
+      ],
+      "age_min": 0.0,
+      "age_max": 100.0,
+      "population_bands": [
+        "Infants (<1)",
+        "Preschool-aged children (1-4)",
+        "School-aged children (5-14)",
+        "Adolescents (15-19)",
+        "Adults (20+)"
+      ],
+      "decision_areas": [],
+      "antibody_targets": [],
+      "existing_surveys": [],
+      "resources": [],
+      "source_row": 6
+    },
+    {
+      "name": "Cholera",
+      "regions": [
+        "AFRO",
+        "AMRO",
+        "EMRO",
+        "SEARO",
+        "WPRO"
+      ],
+      "specimens": [
+        "Stool"
+      ],
+      "diagnostics": [
+        "Cholera rapid diagnostic test on stool or rectal swab, confirmed by culture on TCBS agar or PCR. Case definition applies from age 2 years in an epidemic."
+      ],
+      "age_min": 2.0,
+      "age_max": 100.0,
+      "population_bands": [
+        "Preschool-aged children (1-4)",
+        "School-aged children (5-14)",
+        "Adolescents (15-19)",
+        "Adults (20+)"
+      ],
+      "decision_areas": [],
+      "antibody_targets": [],
+      "existing_surveys": [],
+      "resources": [],
+      "source_row": 7
+    },
+    {
+      "name": "Chromoblastomycosis",
+      "regions": [
+        "AFRO",
+        "AMRO",
+        "WPRO"
+      ],
+      "specimens": [
+        "Wound swab"
+      ],
+      "diagnostics": [
+        "Direct microscopy (KOH) of skin scrapings showing muriform ('copper penny') cells; fungal culture; histopathology."
+      ],
+      "age_min": 15.0,
+      "age_max": 100.0,
+      "population_bands": [
+        "Adolescents (15-19)",
+        "Adults (20+)"
+      ],
+      "decision_areas": [],
+      "antibody_targets": [],
+      "existing_surveys": [],
+      "resources": [],
+      "source_row": 8
+    },
+    {
+      "name": "Clonorchiasis and opisthorchiasis (Foodborne Trematodiases)",
+      "regions": [
+        "SEARO",
+        "WPRO"
+      ],
+      "specimens": [
+        "Stool"
+      ],
+      "diagnostics": [
+        "Kato-Katz; FECT; copro-PCR for species confirmation"
+      ],
+      "age_min": 5.0,
+      "age_max": 100.0,
+      "population_bands": [
+        "School-aged children (5-14)",
+        "Adolescents (15-19)",
+        "Adults (20+)"
+      ],
+      "decision_areas": [
+        "Endemic or suspected-endemic areas with risk factors (consumption of raw freshwater fish)"
+      ],
+      "antibody_targets": [],
+      "existing_surveys": [
+        "Clonorchiasis / opisthorchiasis monitoring survey"
+      ],
+      "resources": [
+        {
+          "title": "Clonorchiasis / opisthorchiasis monitoring survey: WHO expert consultation on foodborne trematode infections",
+          "url": "https://iris.who.int/handle/10665/260007"
+        }
+      ],
+      "source_row": 9
+    },
+    {
+      "name": "Congenital Chagas",
+      "regions": [
+        "AMRO"
+      ],
+      "specimens": [
+        "Finger prick blood"
+      ],
+      "diagnostics": [
+        "Parasitological microscopy or PCR on the newborn in the first months of life; serology at 8-10 months once maternal antibody has cleared."
+      ],
+      "age_min": 0.0,
+      "age_max": 1.0,
+      "population_bands": [
+        "Infants (<1)"
+      ],
+      "decision_areas": [],
+      "antibody_targets": [],
+      "existing_surveys": [],
+      "resources": [],
+      "source_row": 10
+    },
+    {
+      "name": "Congenital Syphilis",
+      "regions": [
+        "AFRO",
+        "AMRO",
+        "EMRO",
+        "SEARO",
+        "WPRO"
+      ],
+      "specimens": [
+        "Finger prick blood",
+        "Venous blood"
+      ],
+      "diagnostics": [
+        "Screening of pregnant women in antenatal care with a dual HIV/syphilis rapid diagnostic test (WHO-recommended first test), with RPR or other non-treponemal titre to identify active infection."
+      ],
+      "age_min": 15.0,
+      "age_max": 49.0,
+      "population_bands": [
+        "Adolescents (15-19)",
+        "Adults (20+)"
+      ],
+      "decision_areas": [],
+      "antibody_targets": [],
+      "existing_surveys": [],
+      "resources": [],
+      "source_row": 11
+    },
+    {
+      "name": "Cysticercosis",
+      "regions": [
+        "AFRO",
+        "AMRO",
+        "SEARO",
+        "WPRO"
+      ],
+      "specimens": [
+        "Venous blood",
+        "Finger prick blood",
+        "Visual/clinical exam"
+      ],
+      "diagnostics": [
+        "Antigen ELISA; EITB (LLGP) serology; neuroimaging for neurocysticercosis"
+      ],
+      "age_min": 5.0,
+      "age_max": 100.0,
+      "population_bands": [
+        "School-aged children (5-14)",
+        "Adolescents (15-19)",
+        "Adults (20+)"
+      ],
+      "decision_areas": [
+        "Village"
+      ],
+      "antibody_targets": [
+        "T24H"
+      ],
+      "existing_surveys": [
+        "T. solium cysticercosis serosurvey"
+      ],
+      "resources": [],
+      "source_row": 12
+    },
+    {
+      "name": "Dengue",
+      "regions": [
+        "AFRO",
+        "AMRO",
+        "EMRO",
+        "EURO",
+        "SEARO",
+        "WPRO"
+      ],
+      "specimens": [
+        "Finger prick blood"
+      ],
+      "diagnostics": [
+        "IgG ELISA (most common); Plaque reduction neutralization test"
+      ],
+      "age_min": 9.0,
+      "age_max": 15.0,
+      "population_bands": [
+        "School-aged children (5-14)"
+      ],
+      "decision_areas": [
+        "National or sub-national"
+      ],
+      "antibody_targets": [
+        "Anti-DENV IgG (EDIII domains, DENV 1-4); NS1-based assays"
+      ],
+      "existing_surveys": [
+        "Dengue Serosurveys"
+      ],
+      "resources": [
+        {
+          "title": "Dengue Serosurveys: https://iris.who.int/server/api/core/bitstreams/40ee4c67-0abc-4e57-ac31-b536debf",
+          "url": "https://iris.who.int/server/api/core/bitstreams/40ee4c67-0abc-4e57-ac31-b536debfb36e/content"
+        }
+      ],
+      "source_row": 13
+    },
+    {
+      "name": "Dracunculiasis",
+      "regions": [
+        "AFRO"
+      ],
+      "specimens": [
+        "Visual/clinical exam"
+      ],
+      "diagnostics": [
+        "Clinical identification of the emerging worm; village-based active case search supported by rumour reporting and cash reward systems."
+      ],
+      "age_min": 0.0,
+      "age_max": 100.0,
+      "population_bands": [
+        "Infants (<1)",
+        "Preschool-aged children (1-4)",
+        "School-aged children (5-14)",
+        "Adolescents (15-19)",
+        "Adults (20+)"
+      ],
+      "decision_areas": [],
+      "antibody_targets": [],
+      "existing_surveys": [],
+      "resources": [],
+      "source_row": 14
+    },
+    {
+      "name": "Echinococcosis",
+      "regions": [
+        "AFRO",
+        "AMRO",
+        "EMRO",
+        "EURO",
+        "SEARO",
+        "WPRO"
+      ],
+      "specimens": [
+        "Visual/clinical exam"
+      ],
+      "diagnostics": [
+        "Portable abdominal ultrasonography; serology as adjunct"
+      ],
+      "age_min": 5.0,
+      "age_max": 14.0,
+      "population_bands": [
+        "School-aged children (5-14)"
+      ],
+      "decision_areas": [
+        "Endemic area"
+      ],
+      "antibody_targets": [],
+      "existing_surveys": [
+        "Cystic echinococcosis ultrasound survey"
+      ],
+      "resources": [],
+      "source_row": 15
+    },
+    {
+      "name": "Fascioliasis (Foodborne Trematodiases)",
+      "regions": [
+        "AFRO",
+        "AMRO",
+        "EMRO",
+        "EURO",
+        "SEARO",
+        "WPRO"
+      ],
+      "specimens": [
+        "Stool"
+      ],
+      "diagnostics": [
+        "Kato-Katz; sedimentation; serology (ELISA)"
+      ],
+      "age_min": 5.0,
+      "age_max": 14.0,
+      "population_bands": [
+        "School-aged children (5-14)"
+      ],
+      "decision_areas": [
+        "Schools in endemic areas; adults included where there is evidence of adult infection"
+      ],
+      "antibody_targets": [
+        "Total IgG: CL1, DRG, FAS2, MM3"
+      ],
+      "existing_surveys": [
+        "Fascioliasis sentinel survey / impact assessment"
+      ],
+      "resources": [],
+      "source_row": 16
+    },
+    {
+      "name": "HIV",
+      "regions": [
+        "AFRO",
+        "AMRO",
+        "EMRO",
+        "EURO",
+        "SEARO",
+        "WPRO"
+      ],
+      "specimens": [
+        "Venous blood"
+      ],
+      "diagnostics": [
+        "HIV viral load, CD4+ counts, anti-retroviral drug metabolite detection, HIV incidence assays"
+      ],
+      "age_min": 15.0,
+      "age_max": 100.0,
+      "population_bands": [
+        "Adolescents (15-19)",
+        "Adults (20+)"
+      ],
+      "decision_areas": [
+        "Nationally representative"
+      ],
+      "antibody_targets": [
+        "HIV-1/2 antibody (rapid test algorithm); limiting-antigen avidity assay for recent infection"
+      ],
+      "existing_surveys": [
+        "Population-based HIV Impact Assessment"
+      ],
+      "resources": [],
+      "source_row": 17
+    },
+    {
+      "name": "Hepatitis B Virus",
+      "regions": [
+        "AFRO",
+        "AMRO",
+        "EMRO",
+        "EURO",
+        "SEARO",
+        "WPRO"
+      ],
+      "specimens": [
+        "Finger prick blood"
+      ],
+      "diagnostics": [
+        "HBsAg rapid test or ELISA; anti-HBc as a marker of past infection"
+      ],
+      "age_min": 4.0,
+      "age_max": 6.0,
+      "population_bands": [
+        "Preschool-aged children (1-4)",
+        "School-aged children (5-14)"
+      ],
+      "decision_areas": [
+        "National (nationally representative)"
+      ],
+      "antibody_targets": [
+        "Anti-HBc; anti-HBs"
+      ],
+      "existing_surveys": [
+        "Hepatitis B (HBsAg) seroprevalence survey in children"
+      ],
+      "resources": [
+        {
+          "title": "Hepatitis B (HBsAg) seroprevalence survey in children: Framework for regional verification of the hepatitis B control goal",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK561131/"
+        }
+      ],
+      "source_row": 18
+    },
+    {
+      "name": "Hepatitis C Virus",
+      "regions": [
+        "AFRO",
+        "AMRO",
+        "EMRO",
+        "SEARO",
+        "WPRO"
+      ],
+      "specimens": [
+        "Venous blood",
+        "Finger prick blood"
+      ],
+      "diagnostics": [
+        "Anti-HCV antibody test on serum, rapid test or dried blood spot, followed by HCV RNA (or core antigen) testing to confirm active infection."
+      ],
+      "age_min": 15.0,
+      "age_max": 100.0,
+      "population_bands": [
+        "Adolescents (15-19)",
+        "Adults (20+)"
+      ],
+      "decision_areas": [],
+      "antibody_targets": [],
+      "existing_surveys": [],
+      "resources": [],
+      "source_row": 19
+    },
+    {
+      "name": "Human African trypanosomiasis (gambiense)",
+      "regions": [
+        "AFRO"
+      ],
+      "specimens": [
+        "Finger prick blood"
+      ],
+      "diagnostics": [
+        "CATT or HAT rapid diagnostic tests, followed by parasitological confirmation; PCR"
+      ],
+      "age_min": 0.0,
+      "age_max": 100.0,
+      "population_bands": [
+        "Infants (<1)",
+        "Preschool-aged children (1-4)",
+        "School-aged children (5-14)",
+        "Adolescents (15-19)",
+        "Adults (20+)"
+      ],
+      "decision_areas": [
+        "National / endemic foci"
+      ],
+      "antibody_targets": [],
+      "existing_surveys": [
+        "Active screening survey (mobile team)"
+      ],
+      "resources": [],
+      "source_row": 20
+    },
+    {
+      "name": "Human African trypanosomiasis (rhodesiense)",
+      "regions": [
+        "AFRO"
+      ],
+      "specimens": [
+        "Finger prick blood"
+      ],
+      "diagnostics": [
+        "Microscopy of a fresh wet preparation or Giemsa-stained thick film, with buffy coat examination to increase sensitivity. No serological screening test exists for this species, so detection is passive rather than through mass screening."
+      ],
+      "age_min": 0.0,
+      "age_max": 100.0,
+      "population_bands": [
+        "Infants (<1)",
+        "Preschool-aged children (1-4)",
+        "School-aged children (5-14)",
+        "Adolescents (15-19)",
+        "Adults (20+)"
+      ],
+      "decision_areas": [],
+      "antibody_targets": [],
+      "existing_surveys": [],
+      "resources": [],
+      "source_row": 21
+    },
+    {
+      "name": "Japanese Encephalitis",
+      "regions": [
+        "SEARO",
+        "WPRO"
+      ],
+      "specimens": [
+        "Cerebrospinal fluid",
+        "Venous blood"
+      ],
+      "diagnostics": [
+        "JEV-specific IgM-capture ELISA on a single Cerebrospinal fluid sample (preferred, to avoid false positives from past infection or vaccination) or on serum."
+      ],
+      "age_min": 0.0,
+      "age_max": 15.0,
+      "population_bands": [
+        "Infants (<1)",
+        "Preschool-aged children (1-4)",
+        "School-aged children (5-14)"
+      ],
+      "decision_areas": [],
+      "antibody_targets": [],
+      "existing_surveys": [],
+      "resources": [],
+      "source_row": 22
+    },
+    {
+      "name": "Leishmaniasis (cutaneous)",
+      "regions": [
+        "AFRO",
+        "AMRO",
+        "EMRO",
+        "SEARO"
+      ],
+      "specimens": [
+        "Visual/clinical exam",
+        "Wound swab",
+        "Finger prick blood"
+      ],
+      "diagnostics": [
+        "Standardized clinical algorithms with photographic reference; PCR or serology for confirmation of specific diseases",
+        "Clinical examination with parasitological or molecular confirmation (microscopy, PCR)"
+      ],
+      "age_min": 5.0,
+      "age_max": 15.0,
+      "population_bands": [
+        "School-aged children (5-14)"
+      ],
+      "decision_areas": [
+        "District or health district",
+        "District"
+      ],
+      "antibody_targets": [
+        "Yaws: Tp15, Tp17, TmpA",
+        "rK39 (primarily validated for visceral disease)"
+      ],
+      "existing_surveys": [
+        "Integrated skin NTD survey",
+        "Cutaneous leishmaniasis epidemiological assessment"
+      ],
+      "resources": [
+        {
+          "title": "Integrated skin NTD survey: WHO skin NTDs strategic framework",
+          "url": "https://www.who.int/publications/i/item/9789240051423"
+        }
+      ],
+      "source_row": 23
+    },
+    {
+      "name": "Leishmaniasis (visceral)",
+      "regions": [
+        "AFRO",
+        "AMRO",
+        "EMRO",
+        "SEARO",
+        "WPRO"
+      ],
+      "specimens": [
+        "Finger prick blood"
+      ],
+      "diagnostics": [
+        "rK39 rapid diagnostic test; direct agglutination test; parasitological confirmation"
+      ],
+      "age_min": 0.0,
+      "age_max": 100.0,
+      "population_bands": [
+        "Infants (<1)",
+        "Preschool-aged children (1-4)",
+        "School-aged children (5-14)",
+        "Adolescents (15-19)",
+        "Adults (20+)"
+      ],
+      "decision_areas": [
+        "District"
+      ],
+      "antibody_targets": [
+        "rK39"
+      ],
+      "existing_surveys": [
+        "Visceral leishmaniasis epidemiological assessment"
+      ],
+      "resources": [],
+      "source_row": 24
+    },
+    {
+      "name": "Leprosy",
+      "regions": [
+        "AFRO",
+        "AMRO",
+        "EMRO",
+        "EURO",
+        "SEARO",
+        "WPRO"
+      ],
+      "specimens": [
+        "Visual/clinical exam",
+        "Wound swab",
+        "Skin slit smear"
+      ],
+      "diagnostics": [
+        "Standardized clinical algorithms with photographic reference; PCR or serology for confirmation of specific diseases",
+        "Clinical examination for anaesthetic skin lesions and nerve thickening; slit-skin smear"
+      ],
+      "age_min": 5.0,
+      "age_max": 15.0,
+      "population_bands": [
+        "School-aged children (5-14)"
+      ],
+      "decision_areas": [
+        "District or health district",
+        "District"
+      ],
+      "antibody_targets": [
+        "Yaws: Tp15, Tp17, TmpA",
+        "Anti-PGL-I IgM"
+      ],
+      "existing_surveys": [
+        "Integrated skin NTD survey",
+        "Leprosy active case detection / contact survey"
+      ],
+      "resources": [
+        {
+          "title": "Integrated skin NTD survey: WHO skin NTDs strategic framework",
+          "url": "https://www.who.int/publications/i/item/9789240051423"
+        }
+      ],
+      "source_row": 25
+    },
+    {
+      "name": "Loiasis",
+      "regions": [
+        "AFRO"
+      ],
+      "specimens": [
+        "Finger prick blood"
+      ],
+      "diagnostics": [
+        "LoaScope or calibrated thick blood smear to quantify the number of mf/ml"
+      ],
+      "age_min": 15.0,
+      "age_max": 100.0,
+      "population_bands": [
+        "Adolescents (15-19)",
+        "Adults (20+)"
+      ],
+      "decision_areas": [],
+      "antibody_targets": [],
+      "existing_surveys": [],
+      "resources": [],
+      "source_row": 26
+    },
+    {
+      "name": "Lymphatic Filariasis",
+      "regions": [
+        "AFRO",
+        "AMRO",
+        "SEARO",
+        "WPRO"
+      ],
+      "specimens": [
+        "Finger prick blood",
+        "Venous blood"
+      ],
+      "diagnostics": [
+        "FTS or QFAT (W. bancrofti); Brugia Test + (Brugia spp.) followed by thick blood smear microscopy among positives"
+      ],
+      "age_min": 5.0,
+      "age_max": 100.0,
+      "population_bands": [
+        "School-aged children (5-14)",
+        "Adolescents (15-19)",
+        "Adults (20+)"
+      ],
+      "decision_areas": [
+        "Evaluation unit (area with <500,000 people; typically a district)",
+        "District or multiple districts",
+        "Evaluation unit / transmission zone",
+        "Variable - health facilities, standardized surveys or targeted surveys"
+      ],
+      "antibody_targets": [
+        "IgG4: Wb123, Bm14, Bm33 (W. bancrofti); BmR1 (Brugia spp.)"
+      ],
+      "existing_surveys": [
+        "Epidemiological Monitoring Survey (EMS)",
+        "Transmission Assessment Survey (TAS)",
+        "IDA Impact Survey (IIS)",
+        "Coverage Evaluation Survey",
+        "Integrated Transmission Assessment Survey (iTAS)",
+        "Post-validation surveillance"
+      ],
+      "resources": [
+        {
+          "title": "Epidemiological Monitoring Survey (EMS): GPELF Manual 2nd Edition",
+          "url": "https://www.who.int/publications/i/item/9789240105959"
+        },
+        {
+          "title": "Transmission Assessment Survey (TAS): GPELF Manual 2nd Edition",
+          "url": "https://www.who.int/publications/i/item/9789240105959"
+        },
+        {
+          "title": "Transmission Assessment Survey (TAS): Survey Sample Builder",
+          "url": "https://www.cor-ntd.org/resources/transmission-assessment-survey-sample-builder"
+        },
+        {
+          "title": "IDA Impact Survey (IIS): GPELF Manual 2nd Edition",
+          "url": "https://www.who.int/publications/i/item/9789240105959"
+        },
+        {
+          "title": "IDA Impact Survey (IIS): IDA Impact Survey Sample Builder",
+          "url": "https://www.cor-ntd.org/resources/ida-impact-survey-sample-builder"
+        }
+      ],
+      "source_row": 27
+    },
+    {
+      "name": "Malaria",
+      "regions": [
+        "AFRO",
+        "AMRO",
+        "EMRO",
+        "SEARO",
+        "WPRO"
+      ],
+      "specimens": [
+        "Finger prick blood"
+      ],
+      "diagnostics": [
+        "Malaria RDT, HemoCue, dried blood spots"
+      ],
+      "age_min": 0.0,
+      "age_max": 49.0,
+      "population_bands": [
+        "Infants (<1)",
+        "Preschool-aged children (1-4)",
+        "School-aged children (5-14)",
+        "Adolescents (15-19)",
+        "Adults (20+)"
+      ],
+      "decision_areas": [
+        "Nationwide"
+      ],
+      "antibody_targets": [
+        "Total IgG: MSP1-19, AMA-1, CSP, LSA-1, Etramp5.Ag1, GLURP"
+      ],
+      "existing_surveys": [
+        "Malaria Indicator Survey"
+      ],
+      "resources": [
+        {
+          "title": "Malaria Indicator Survey: Malaria Indicator Survey",
+          "url": "https://dhsprogram.com/methodology/Survey-Types/MIS.cfm"
+        }
+      ],
+      "source_row": 28
+    },
+    {
+      "name": "Measles & Rubella",
+      "regions": [
+        "AFRO",
+        "AMRO",
+        "EMRO",
+        "EURO",
+        "SEARO",
+        "WPRO"
+      ],
+      "specimens": [
+        "Finger prick blood"
+      ],
+      "diagnostics": [
+        "Enzyme immunoassays (EIA), multiplex bead assays, or plaque reduction neutralization test (PRNT)"
+      ],
+      "age_min": 0.75,
+      "age_max": 39.0,
+      "population_bands": [
+        "Infants (<1)",
+        "Preschool-aged children (1-4)",
+        "School-aged children (5-14)",
+        "Adolescents (15-19)",
+        "Adults (20+)"
+      ],
+      "decision_areas": [
+        "National or subnational"
+      ],
+      "antibody_targets": [
+        "Measles-specific IgG; rubella-specific IgG (IgM for acute case confirmation)"
+      ],
+      "existing_surveys": [
+        "Measles and Rubella Serosurvey"
+      ],
+      "resources": [
+        {
+          "title": "Measles and Rubella Serosurvey: https://www.technet-21.org/en/resources/guidance/who-guidelines-on-the-use-of-se",
+          "url": "https://www.technet-21.org/en/resources/guidance/who-guidelines-on-the-use-of-serosurveys-in-support-of-measles-and-rubella-elimination"
+        }
+      ],
+      "source_row": 29
+    },
+    {
+      "name": "Mycetoma",
+      "regions": [
+        "AFRO",
+        "AMRO",
+        "EMRO",
+        "SEARO"
+      ],
+      "specimens": [
+        "Visual/clinical exam",
+        "Wound swab"
+      ],
+      "diagnostics": [
+        "Standardized clinical algorithms with photographic reference; PCR or serology for confirmation of specific diseases"
+      ],
+      "age_min": 5.0,
+      "age_max": 15.0,
+      "population_bands": [
+        "School-aged children (5-14)"
+      ],
+      "decision_areas": [
+        "District or health district"
+      ],
+      "antibody_targets": [
+        "Yaws: Tp15, Tp17, TmpA"
+      ],
+      "existing_surveys": [
+        "Integrated skin NTD survey"
+      ],
+      "resources": [
+        {
+          "title": "Integrated skin NTD survey: WHO skin NTDs strategic framework",
+          "url": "https://www.who.int/publications/i/item/9789240051423"
+        }
+      ],
+      "source_row": 30
+    },
+    {
+      "name": "Noma",
+      "regions": [
+        "AFRO"
+      ],
+      "specimens": [
+        "Visual/clinical exam"
+      ],
+      "diagnostics": [
+        "Clinical examination using the WHO staging system (stages 0-5); early detection at community and primary care level, often alongside other skin NTDs."
+      ],
+      "age_min": 2.0,
+      "age_max": 6.0,
+      "population_bands": [
+        "Preschool-aged children (1-4)",
+        "School-aged children (5-14)"
+      ],
+      "decision_areas": [],
+      "antibody_targets": [],
+      "existing_surveys": [],
+      "resources": [],
+      "source_row": 31
+    },
+    {
+      "name": "Onchocerciasis",
+      "regions": [
+        "AFRO",
+        "EMRO"
+      ],
+      "specimens": [
+        "Finger prick blood"
+      ],
+      "diagnostics": [
+        "Onchocerca serology test (RDT or ELISA)"
+      ],
+      "age_min": 5.0,
+      "age_max": 100.0,
+      "population_bands": [
+        "School-aged children (5-14)",
+        "Adolescents (15-19)",
+        "Adults (20+)"
+      ],
+      "decision_areas": [
+        "District or multiple districts",
+        "District or transmission zone",
+        "Transmission zone",
+        "Evaluation unit / transmission zone"
+      ],
+      "antibody_targets": [
+        "Ov16, Ov33, OvOC3261",
+        "OV: Ov16, Ov33, OvOC3261",
+        "LF: Wb123, Bm14, BM33 (W bancrofti); BmR1 (Brugia spp.)"
+      ],
+      "existing_surveys": [
+        "Coverage Evaluation Survey",
+        "Onchocerciasis Elimination Mapping",
+        "Onchocerciasis Stop MDA survey",
+        "Integrated Transmission Assessment Survey (iTAS)",
+        "Pre-Stop MDA survey"
+      ],
+      "resources": [
+        {
+          "title": "Onchocerciasis Elimination Mapping: OEM Handbook",
+          "url": "https://www.who.int/publications/i/item/9789240099227"
+        }
+      ],
+      "source_row": 32
+    },
+    {
+      "name": "Podoconiosis",
+      "regions": [
+        "AFRO"
+      ],
+      "specimens": [
+        "Visual/clinical exam"
+      ],
+      "diagnostics": [
+        "Clinical algorithm: bilateral, asymmetrical lower-limb lymphoedema present more than one year, in a long-term resident, testing negative for W. bancrofti antigen and IgG4 to exclude lymphatic filariasis."
+      ],
+      "age_min": 15.0,
+      "age_max": 100.0,
+      "population_bands": [
+        "Adolescents (15-19)",
+        "Adults (20+)"
+      ],
+      "decision_areas": [],
+      "antibody_targets": [],
+      "existing_surveys": [],
+      "resources": [],
+      "source_row": 33
+    },
+    {
+      "name": "Polio",
+      "regions": [
+        "AFRO"
+      ],
+      "specimens": [
+        "Venous blood"
+      ],
+      "diagnostics": [
+        "Neutralization assay for poliovirus types 1, 2 and 3"
+      ],
+      "age_min": 0.5,
+      "age_max": 5.0,
+      "population_bands": [
+        "Infants (<1)",
+        "Preschool-aged children (1-4)"
+      ],
+      "decision_areas": [
+        "National or sub-national (often high-risk areas)"
+      ],
+      "antibody_targets": [
+        "Neutralizing antibodies to poliovirus types 1, 2, 3"
+      ],
+      "existing_surveys": [
+        "Poliovirus seroprevalence survey"
+      ],
+      "resources": [],
+      "source_row": 34
+    },
+    {
+      "name": "Rift Valley Fever",
+      "regions": [
+        "AFRO"
+      ],
+      "specimens": [
+        "Venous blood"
+      ],
+      "diagnostics": [
+        "IgM ELISA (antibody detectable from about day 4); RT-PCR during the acute viraemic phase."
+      ],
+      "age_min": 0.0,
+      "age_max": 100.0,
+      "population_bands": [
+        "Infants (<1)",
+        "Preschool-aged children (1-4)",
+        "School-aged children (5-14)",
+        "Adolescents (15-19)",
+        "Adults (20+)"
+      ],
+      "decision_areas": [],
+      "antibody_targets": [],
+      "existing_surveys": [],
+      "resources": [],
+      "source_row": 35
+    },
+    {
+      "name": "Ross River Virus",
+      "regions": [
+        "WPRO"
+      ],
+      "specimens": [
+        "Venous blood"
+      ],
+      "diagnostics": [
+        "IgM and IgG ELISA, with confirmation on paired acute and convalescent sera."
+      ],
+      "age_min": 15.0,
+      "age_max": 100.0,
+      "population_bands": [
+        "Adolescents (15-19)",
+        "Adults (20+)"
+      ],
+      "decision_areas": [],
+      "antibody_targets": [],
+      "existing_surveys": [],
+      "resources": [],
+      "source_row": 36
+    },
+    {
+      "name": "Scabies",
+      "regions": [
+        "AFRO",
+        "AMRO",
+        "SEARO",
+        "WPRO"
+      ],
+      "specimens": [
+        "Visual/clinical exam",
+        "Wound swab"
+      ],
+      "diagnostics": [
+        "Standardized clinical algorithms with photographic reference; PCR or serology for confirmation of specific diseases",
+        "IACS clinical diagnostic criteria (standardized visual examination)"
+      ],
+      "age_min": 5.0,
+      "age_max": 15.0,
+      "population_bands": [
+        "School-aged children (5-14)"
+      ],
+      "decision_areas": [
+        "District or health district",
+        "District or island/community unit"
+      ],
+      "antibody_targets": [
+        "Yaws: Tp15, Tp17, TmpA"
+      ],
+      "existing_surveys": [
+        "Integrated skin NTD survey",
+        "Scabies population-based prevalence survey"
+      ],
+      "resources": [
+        {
+          "title": "Integrated skin NTD survey: WHO skin NTDs strategic framework",
+          "url": "https://www.who.int/publications/i/item/9789240051423"
+        }
+      ],
+      "source_row": 37
+    },
+    {
+      "name": "Schistosomiasis",
+      "regions": [
+        "AFRO",
+        "AMRO",
+        "SEARO",
+        "WPRO"
+      ],
+      "specimens": [
+        "Urine",
+        "Stool",
+        "Finger prick blood"
+      ],
+      "diagnostics": [
+        "S. haematobium: Urine filration, dipstick of CAA; S mansoni: Kato-katz, POC-CCA, or CAA"
+      ],
+      "age_min": 5.0,
+      "age_max": 100.0,
+      "population_bands": [
+        "School-aged children (5-14)",
+        "Adolescents (15-19)",
+        "Adults (20+)"
+      ],
+      "decision_areas": [
+        "District; sub-district",
+        "Flexible - typically multiple districts or nationwide",
+        "District or multiple districts"
+      ],
+      "antibody_targets": [
+        "S. mansoni: Sm-25, Sm29, CD63-like, Calumenin B; S. haematobium: SAP1, Sh-quad"
+      ],
+      "existing_surveys": [
+        "Schistosomiasis Practical and Precision Assessments",
+        "Impact Assessment (Model-based geostatistics or other cluster methodology)",
+        "Coverage Evaluation Survey"
+      ],
+      "resources": [
+        {
+          "title": "Schistosomiasis Practical and Precision Assessments: Schistosomiasis Practical and Precision Assessment Manual",
+          "url": "https://espen.afro.who.int/tools-resources/advanced-analytical-tools/schistosomiasis-mapper-tool"
+        }
+      ],
+      "source_row": 38
+    },
+    {
+      "name": "Soil-transmitted helminthiasis",
+      "regions": [
+        "AFRO",
+        "AMRO",
+        "SEARO",
+        "WPRO"
+      ],
+      "specimens": [
+        "Stool"
+      ],
+      "diagnostics": [
+        "Kato-Katz (dual slide); Mini-FLOTAC or qPCR in some settings"
+      ],
+      "age_min": 5.0,
+      "age_max": 100.0,
+      "population_bands": [
+        "School-aged children (5-14)",
+        "Adolescents (15-19)",
+        "Adults (20+)"
+      ],
+      "decision_areas": [
+        "District or multiple districts",
+        "District or sub-national"
+      ],
+      "antibody_targets": [],
+      "existing_surveys": [
+        "Coverage Evaluation Survey",
+        "STH Impact Assessment"
+      ],
+      "resources": [],
+      "source_row": 39
+    },
+    {
+      "name": "Sporotrichosis",
+      "regions": [
+        "AMRO"
+      ],
+      "specimens": [
+        "Wound swab"
+      ],
+      "diagnostics": [
+        "Direct microscopy and fungal culture of exudate or biopsy material; histopathology. Culture is the reference standard."
+      ],
+      "age_min": 0.0,
+      "age_max": 100.0,
+      "population_bands": [
+        "Infants (<1)",
+        "Preschool-aged children (1-4)",
+        "School-aged children (5-14)",
+        "Adolescents (15-19)",
+        "Adults (20+)"
+      ],
+      "decision_areas": [],
+      "antibody_targets": [],
+      "existing_surveys": [],
+      "resources": [],
+      "source_row": 40
+    },
+    {
+      "name": "Syphilis",
+      "regions": [
+        "AFRO",
+        "AMRO",
+        "EMRO",
+        "EURO",
+        "SEARO",
+        "WPRO"
+      ],
+      "specimens": [
+        "Finger prick blood",
+        "Venous blood"
+      ],
+      "diagnostics": [
+        "Treponemal rapid diagnostic test, or dual HIV/syphilis RDT, with an RPR or VDRL non-treponemal titre to distinguish active from treated infection."
+      ],
+      "age_min": 15.0,
+      "age_max": 49.0,
+      "population_bands": [
+        "Adolescents (15-19)",
+        "Adults (20+)"
+      ],
+      "decision_areas": [],
+      "antibody_targets": [],
+      "existing_surveys": [],
+      "resources": [],
+      "source_row": 41
+    },
+    {
+      "name": "Taeniasis",
+      "regions": [
+        "AFRO",
+        "AMRO",
+        "SEARO",
+        "WPRO"
+      ],
+      "specimens": [
+        "Stool"
+      ],
+      "diagnostics": [
+        "Kato-Katz followed by molecular species confirmation (PCR); copro-antigen ELISA"
+      ],
+      "age_min": 5.0,
+      "age_max": 100.0,
+      "population_bands": [
+        "School-aged children (5-14)",
+        "Adolescents (15-19)",
+        "Adults (20+)"
+      ],
+      "decision_areas": [
+        "District or sub-district"
+      ],
+      "antibody_targets": [
+        "Taeniasis: rES33; cysticercosis: T24H"
+      ],
+      "existing_surveys": [
+        "T. solium mapping and monitoring survey"
+      ],
+      "resources": [],
+      "source_row": 42
+    },
+    {
+      "name": "Trachoma",
+      "regions": [
+        "AFRO",
+        "AMRO",
+        "EMRO",
+        "SEARO",
+        "WPRO"
+      ],
+      "specimens": [
+        "Visual/clinical exam",
+        "Finger prick blood",
+        "Eye swab"
+      ],
+      "diagnostics": [
+        "Clinical grading to assess trachomatous folicular and trachomatous trichiasis; Pgp3/Ct694 serology and molecular testing for chlamydia DNA (via ocular swab) optional"
+      ],
+      "age_min": 1.0,
+      "age_max": 100.0,
+      "population_bands": [
+        "Preschool-aged children (1-4)",
+        "School-aged children (5-14)",
+        "Adolescents (15-19)",
+        "Adults (20+)"
+      ],
+      "decision_areas": [
+        "District or multiple districts",
+        "Evaluation unit (typically district-level, population 100,000-250,000)",
+        "Evaluation unit (typically district)"
+      ],
+      "antibody_targets": [
+        "Pgp3, Ct694"
+      ],
+      "existing_surveys": [
+        "Coverage Evaluation Survey",
+        "Trachoma Impact Survey (TIS) / Trachoma Surveillance Survey (TSS)",
+        "Trachoma baseline prevalence (mapping) survey"
+      ],
+      "resources": [
+        {
+          "title": "Trachoma Impact Survey (TIS) / Trachoma Surveillance Survey (TSS): Tropical Data survey methodology",
+          "url": "https://www.tropicaldata.org/"
+        },
+        {
+          "title": "Trachoma Impact Survey (TIS) / Trachoma Surveillance Survey (TSS): Tropical Data: Approach and Methodology as Applied to Trachoma Prevalence Surveys",
+          "url": "https://www.tandfonline.com/doi/full/10.1080/09286586.2023.2249546"
+        },
+        {
+          "title": "Trachoma baseline prevalence (mapping) survey: Tropical Data",
+          "url": "https://www.tropicaldata.org/"
+        }
+      ],
+      "source_row": 43
+    },
+    {
+      "name": "Tuberculosis",
+      "regions": [
+        "AFRO",
+        "AMRO",
+        "EMRO",
+        "SEARO",
+        "WPRO"
+      ],
+      "specimens": [
+        "Sputum"
+      ],
+      "diagnostics": [
+        "Chest X-ray and symptom screening, followed by Xpert MTB/RIF Ultra and/or culture on sputum"
+      ],
+      "age_min": 15.0,
+      "age_max": 100.0,
+      "population_bands": [
+        "Adolescents (15-19)",
+        "Adults (20+)"
+      ],
+      "decision_areas": [
+        "Nationally representative"
+      ],
+      "antibody_targets": [],
+      "existing_surveys": [
+        "National TB prevalence survey"
+      ],
+      "resources": [
+        {
+          "title": "National TB prevalence survey: Tuberculosis prevalence surveys: a handbook (the 'Lime Book')",
+          "url": "https://www.who.int/publications/i/item/9789241548168"
+        },
+        {
+          "title": "National TB prevalence survey: WHO guidance on national TB prevalence surveys (2025)",
+          "url": "https://cdn.who.int/media/docs/default-source/hq-tuberculosis/national-tb-prevalence-survey-guidance-summary-slides_11july2025.pdf"
+        }
+      ],
+      "source_row": 44
+    },
+    {
+      "name": "Tungiasis",
+      "regions": [
+        "AFRO",
+        "AMRO"
+      ],
+      "specimens": [
+        "Visual/clinical exam",
+        "Wound swab"
+      ],
+      "diagnostics": [
+        "Standardized clinical algorithms with photographic reference; PCR or serology for confirmation of specific diseases"
+      ],
+      "age_min": 5.0,
+      "age_max": 15.0,
+      "population_bands": [
+        "School-aged children (5-14)"
+      ],
+      "decision_areas": [
+        "District or health district"
+      ],
+      "antibody_targets": [
+        "Yaws: Tp15, Tp17, TmpA"
+      ],
+      "existing_surveys": [
+        "Integrated skin NTD survey"
+      ],
+      "resources": [
+        {
+          "title": "Integrated skin NTD survey: WHO skin NTDs strategic framework",
+          "url": "https://www.who.int/publications/i/item/9789240051423"
+        }
+      ],
+      "source_row": 45
+    },
+    {
+      "name": "West Nile Virus",
+      "regions": [
+        "AMRO",
+        "EURO"
+      ],
+      "specimens": [
+        "Venous blood",
+        "Cerebrospinal fluid"
+      ],
+      "diagnostics": [
+        "WNV-specific IgM ELISA on serum and/or Cerebrospinal fluid; RT-PCR on serum, whole blood or urine in the first few days of illness before antibody appears."
+      ],
+      "age_min": 0.0,
+      "age_max": 100.0,
+      "population_bands": [
+        "Infants (<1)",
+        "Preschool-aged children (1-4)",
+        "School-aged children (5-14)",
+        "Adolescents (15-19)",
+        "Adults (20+)"
+      ],
+      "decision_areas": [],
+      "antibody_targets": [],
+      "existing_surveys": [],
+      "resources": [],
+      "source_row": 46
+    },
+    {
+      "name": "Yaws",
+      "regions": [
+        "AFRO",
+        "AMRO",
+        "SEARO",
+        "WPRO"
+      ],
+      "specimens": [
+        "Visual/clinical exam",
+        "Wound swab",
+        "Finger prick blood"
+      ],
+      "diagnostics": [
+        "Standardized clinical algorithms with photographic reference; PCR or serology for confirmation of specific diseases",
+        "DPP Syphilis Screen & Confirm (treponemal/non-treponemal); RPR; PCR of lesion swabs"
+      ],
+      "age_min": 1.0,
+      "age_max": 15.0,
+      "population_bands": [
+        "Preschool-aged children (1-4)",
+        "School-aged children (5-14)"
+      ],
+      "decision_areas": [
+        "District or health district",
+        "District"
+      ],
+      "antibody_targets": [
+        "Yaws: Tp15, Tp17, TmpA",
+        "Tp15, Tp17, TmpA"
+      ],
+      "existing_surveys": [
+        "Integrated skin NTD survey",
+        "Yaws serosurveillance survey"
+      ],
+      "resources": [
+        {
+          "title": "Integrated skin NTD survey: WHO skin NTDs strategic framework",
+          "url": "https://www.who.int/publications/i/item/9789240051423"
+        }
+      ],
+      "source_row": 47
+    },
+    {
+      "name": "Yellow Fever",
+      "regions": [
+        "AFRO",
+        "AMRO"
+      ],
+      "specimens": [
+        "Venous blood"
+      ],
+      "diagnostics": [
+        "IgM-capture ELISA as the screening test, confirmed by plaque reduction neutralization test (PRNT) at a reference laboratory; RT-PCR if the sample is collected within about 10 days of onset."
+      ],
+      "age_min": 0.0,
+      "age_max": 100.0,
+      "population_bands": [
+        "Infants (<1)",
+        "Preschool-aged children (1-4)",
+        "School-aged children (5-14)",
+        "Adolescents (15-19)",
+        "Adults (20+)"
+      ],
+      "decision_areas": [],
+      "antibody_targets": [],
+      "existing_surveys": [
+        "Estimating and monitoring yellow fever reactive campaign vaccination coverage"
+      ],
+      "resources": [
+        {
+          "title": "Yellow fever reactive campaign vaccination coverage",
+          "url": "https://iris.who.int/server/api/core/bitstreams/f0240e21-907e-4590-b8e4-2c58afad735f/content"
+        }
+      ],
+      "source_row": 48
+    },
+    {
+      "name": "Zika",
+      "regions": [
+        "AFRO",
+        "AMRO",
+        "SEARO",
+        "WPRO"
+      ],
+      "specimens": [
+        "Venous blood",
+        "Urine"
+      ],
+      "diagnostics": [
+        "RT-PCR on serum and urine during the acute phase; IgM ELISA thereafter, interpreted with care because of cross-reactivity with dengue."
+      ],
+      "age_min": 0.0,
+      "age_max": 100.0,
+      "population_bands": [
+        "Infants (<1)",
+        "Preschool-aged children (1-4)",
+        "School-aged children (5-14)",
+        "Adolescents (15-19)",
+        "Adults (20+)"
+      ],
+      "decision_areas": [],
+      "antibody_targets": [],
+      "existing_surveys": [],
+      "resources": [],
+      "source_row": 49
+    },
+    {
+      "name": "Paragonimiasis (Foodborne Trematodiases)",
+      "regions": [
+        "AMRO",
+        "SEARO",
+        "WPRO"
+      ],
+      "specimens": [
+        "Sputum",
+        "Stool"
+      ],
+      "diagnostics": [
+        "Microscopy of sputum/stool; serology; differential diagnosis with TB"
+      ],
+      "age_min": 5.0,
+      "age_max": 100.0,
+      "population_bands": [
+        "School-aged children (5-14)",
+        "Adolescents (15-19)",
+        "Adults (20+)"
+      ],
+      "decision_areas": [
+        "Endemic or suspected-endemic areas"
+      ],
+      "antibody_targets": [],
+      "existing_surveys": [
+        "Paragonimiasis monitoring survey"
+      ],
+      "resources": [],
+      "source_row": 50
+    }
+  ],
   "facets": {
     "regions": [
       "AFRO",
@@ -1644,13 +3284,30 @@ window.EXPLORER_DATA = {
       "Active - WHO/Gavi",
       "Active - WHO/Global Fund",
       "Active - WHO/UNICEF/Gavi",
-      "Active - ad hoc",
-      "Active - country dependent",
-      "Active - driven by vaccine introduction",
       "Active - limited to emergency funding through 2028",
-      "Active - limited via DHS Program",
       "Active - limited; PEPFAR/CDC funded",
+      "Active, but depends on individual country and partner funding",
+      "Active, but limited because typically tied to DHS surveys",
+      "Active, but limited to African settings and dependent on partner funding",
+      "Active, closely coordinated by Tropical Data and International Trachoma Initiative and dependent on partner funding",
+      "Active, driven by vaccine introduction decisions",
+      "Active, though largely ad hoc and commissioned on a case-by-case basis",
+      "Active, with support from WHO/UNICEF/Gavi",
       "Uncertain"
+    ],
+    "disease_specimens": [
+      "Cerebrospinal fluid",
+      "Cervical or vaginal swab",
+      "Eye swab",
+      "Fine needle aspirate",
+      "Finger prick blood",
+      "Skin slit smear",
+      "Sputum",
+      "Stool",
+      "Urine",
+      "Venous blood",
+      "Visual/clinical exam",
+      "Wound swab"
     ]
   }
 };

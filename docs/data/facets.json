@@ -9,13 +9,13 @@
   ],
   "specimens": [
     "Finger prick blood",
-    "None",
     "Sputum",
     "Stool",
     "Urine",
     "Venous blood",
     "Visual/clinical exam",
-    "Wound swab"
+    "Wound swab",
+    "None (questionnaire only)"
   ],
   "primary_sampling_units": [
     "Community",
@@ -71,12 +71,29 @@
     "Active - WHO/Gavi",
     "Active - WHO/Global Fund",
     "Active - WHO/UNICEF/Gavi",
-    "Active - ad hoc",
-    "Active - country dependent",
-    "Active - driven by vaccine introduction",
     "Active - limited to emergency funding through 2028",
-    "Active - limited via DHS Program",
     "Active - limited; PEPFAR/CDC funded",
+    "Active, but depends on individual country and partner funding",
+    "Active, but limited because typically tied to DHS surveys",
+    "Active, but limited to African settings and dependent on partner funding",
+    "Active, closely coordinated by Tropical Data and International Trachoma Initiative and dependent on partner funding",
+    "Active, driven by vaccine introduction decisions",
+    "Active, though largely ad hoc and commissioned on a case-by-case basis",
+    "Active, with support from WHO/UNICEF/Gavi",
     "Uncertain"
+  ],
+  "disease_specimens": [
+    "Cerebrospinal fluid",
+    "Cervical or vaginal swab",
+    "Eye swab",
+    "Fine needle aspirate",
+    "Finger prick blood",
+    "Skin slit smear",
+    "Sputum",
+    "Stool",
+    "Urine",
+    "Venous blood",
+    "Visual/clinical exam",
+    "Wound swab"
   ]
 }
