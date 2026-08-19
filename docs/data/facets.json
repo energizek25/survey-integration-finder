@@ -1,0 +1,82 @@
+{
+  "regions": [
+    "AFRO",
+    "AMRO",
+    "EMRO",
+    "EURO",
+    "SEARO",
+    "WPRO"
+  ],
+  "specimens": [
+    "Finger prick blood",
+    "None",
+    "Sputum",
+    "Stool",
+    "Urine",
+    "Venous blood",
+    "Visual/clinical exam",
+    "Wound swab"
+  ],
+  "primary_sampling_units": [
+    "Community",
+    "School"
+  ],
+  "population_bands": [
+    "Infants (<1)",
+    "Preschool-aged children (1-4)",
+    "School-aged children (5-14)",
+    "Adolescents (15-19)",
+    "Adults (20+)"
+  ],
+  "diseases": [
+    "Acute malnutrition (multi-disease platform)",
+    "Adolescent health risk factors (multi-disease platform)",
+    "Buruli Ulcer",
+    "Dengue",
+    "HIV",
+    "Hepatitis B Virus",
+    "Leishmaniasis (cutaneous)",
+    "Leprosy",
+    "Lymphatic Filariasis",
+    "Malaria",
+    "Measles & Rubella",
+    "Micronutrient deficiencies (multi-disease platform)",
+    "Multiple (maternal and child health, malaria, anaemia, HIV)",
+    "Multiple Indicator Cluster Survey (MICS) - by UNICEF",
+    "Mycetoma",
+    "Noncommunicable diseases (multi-disease platform)",
+    "Onchocerciasis",
+    "Polio",
+    "Scabies",
+    "Schistosomiasis",
+    "Soil-transmitted helminthiasis",
+    "Soil-transmitted helminths",
+    "Taeniasis",
+    "Tobacco use (multi-disease platform)",
+    "Trachoma",
+    "Tuberculosis",
+    "Tungiasis",
+    "Vaccination Coverage Cluster Surveys (routine immunization)",
+    "Vaccine Preventable Diseases",
+    "Yaws",
+    "lymphatic filariasis"
+  ],
+  "funding_status": [
+    "Active - GPEI",
+    "Active - UNICEF",
+    "Active - UNICEF/ACF funded",
+    "Active - UNICEF/partners",
+    "Active - WHO NCD Dept.",
+    "Active - WHO/CDC",
+    "Active - WHO/Gavi",
+    "Active - WHO/Global Fund",
+    "Active - WHO/UNICEF/Gavi",
+    "Active - ad hoc",
+    "Active - country dependent",
+    "Active - driven by vaccine introduction",
+    "Active - limited to emergency funding through 2028",
+    "Active - limited via DHS Program",
+    "Active - limited; PEPFAR/CDC funded",
+    "Uncertain"
+  ]
+}
