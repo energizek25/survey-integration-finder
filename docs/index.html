@@ -4,6 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Integrated Disease Assessment Explorer — one survey, many answers</title>
+<!-- Favicon: the same segmented-bulb mark, inlined as an SVG data URI so there is no
+     separate file to upload and nothing extra for the browser to fetch. -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3CclipPath id='c'%3E%3Cpath d='M32 6a17 17 0 0 1 10.2 30.6c-1.9 1.5-2.9 3.2-3.1 5.4H24.9c-0.2-2.2-1.2-3.9-3.1-5.4A17 17 0 0 1 32 6z'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path='url(%23c)'%3E%3Cpath d='M32 23 32 0 55 33Z' fill='%231a5f86'/%3E%3Cpath d='M32 23 55 33 9 33Z' fill='%23e8a33d'/%3E%3Cpath d='M32 23 9 33 32 0Z' fill='%232b7ba8'/%3E%3C/g%3E%3Cg fill='none' stroke='%231a5f86' stroke-width='4.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M32 6a17 17 0 0 1 10.2 30.6c-1.9 1.5-2.9 3.2-3.1 5.4H24.9c-0.2-2.2-1.2-3.9-3.1-5.4A17 17 0 0 1 32 6z'/%3E%3Cpath d='M25.8 47.5h12.4'/%3E%3Cpath d='M27.6 53h8.8'/%3E%3C/g%3E%3C/svg%3E">
 <style>
   :root{
     --ink:#12303b; --muted:#5b7683; --line:#dde6ea; --bg:#eef3f8; --card:#fff;
@@ -18,6 +21,8 @@
   body{margin:0;font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
        color:var(--ink);background:var(--bg)}
   header{background:var(--accent);color:#fff;padding:30px 24px 26px;text-align:center}
+  .brand{display:flex;align-items:center;justify-content:center;gap:14px}
+  .brand svg{width:54px;height:54px;flex:0 0 auto}
   header h1{margin:0;font-size:34px;font-weight:700;letter-spacing:-.015em;line-height:1.15}
   header p{margin:10px auto 0;font-size:16px;opacity:.93;max-width:78ch}
   header p.tagline{margin:8px auto 0;font-size:21px;font-style:italic;opacity:1;font-weight:400}
@@ -119,14 +124,32 @@
   @media(max-width:900px){
     .wrap{flex-direction:column}
     .col-left{width:100%;flex:none;position:static;max-height:none}
-    header h1{font-size:27px} header p.tagline{font-size:18px}
+    header h1{font-size:25px} header p.tagline{font-size:18px}
+    .brand{gap:11px} .brand svg{width:42px;height:42px}
   }
 </style>
 </head>
 <body>
 <div id="banner"></div>
 <header>
-  <h1>Integrated Disease Assessment Explorer</h1>
+  <div class="brand">
+    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img"
+         aria-label="Logo: a lightbulb divided into three segments">
+      <defs><clipPath id="bulbclip">
+        <path d="M32 6a17 17 0 0 1 10.2 30.6c-1.9 1.5-2.9 3.2-3.1 5.4H24.9c-0.2-2.2-1.2-3.9-3.1-5.4A17 17 0 0 1 32 6z"/>
+      </clipPath></defs>
+      <g clip-path="url(#bulbclip)">
+        <path d="M32 23 32 0 55 33Z" fill="#ffffff"/>
+        <path d="M32 23 55 33 9 33Z" fill="#e8a33d"/>
+        <path d="M32 23 9 33 32 0Z" fill="#cfe2ee"/>
+      </g>
+      <g fill="none" stroke="#ffffff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M32 6a17 17 0 0 1 10.2 30.6c-1.9 1.5-2.9 3.2-3.1 5.4H24.9c-0.2-2.2-1.2-3.9-3.1-5.4A17 17 0 0 1 32 6z"/>
+        <path d="M25.8 47h12.4"/><path d="M27.6 52h8.8"/>
+      </g>
+    </svg>
+    <h1>Integrated Disease Assessment Explorer</h1>
+  </div>
   <p class="tagline">One survey, many answers</p>
   <p>Find opportunities to integrate disease assessments — either by joining a survey that is already funded, or by adding assessments to a survey you are about to run.</p>
 </header>
