@@ -1179,10 +1179,7 @@
   {
     "name": "Schistosomiasis",
     "regions": [
-      "AFRO",
-      "AMRO",
-      "SEARO",
-      "WPRO"
+      "AFRO"
     ],
     "specimens": [
       "Urine",
@@ -1221,6 +1218,49 @@
     "source_row": 38
   },
   {
+    "name": "Schistosomiasis",
+    "regions": [
+      "AMRO",
+      "SEARO",
+      "WPRO"
+    ],
+    "specimens": [
+      "Stool",
+      "Finger prick blood"
+    ],
+    "diagnostics": [
+      "S mansoni: Kato-katz, POC-CCA, or CAA",
+      "S japonicum: Kato-katz"
+    ],
+    "age_min": 5.0,
+    "age_max": 100.0,
+    "population_bands": [
+      "School-aged children (5-14)",
+      "Adolescents (15-19)",
+      "Adults (20+)"
+    ],
+    "decision_areas": [
+      "District; sub-district",
+      "Flexible - typically multiple districts or nationwide",
+      "District or multiple districts"
+    ],
+    "antibody_targets": [
+      "S. mansoni: Sm-25, Sm29, CD63-like, Calumenin B;"
+    ],
+    "existing_surveys": [
+      "Schistosomiasis Practical and Precision Assessments",
+      "Impact Assessment (Model-based geostatistics or other cluster methodology)",
+      "Coverage Evaluation Survey"
+    ],
+    "resources": [
+      {
+        "title": "Schistosomiasis Practical and Precision Assessments: Schistosomiasis Practical and Precision Assessment Manual",
+        "url": "https://espen.afro.who.int/tools-resources/advanced-analytical-tools/schistosomiasis-mapper-tool"
+      }
+    ],
+    "source_row": 39
+  },
+  {
     "name": "Soil-transmitted helminthiasis",
     "regions": [
       "AFRO",
@@ -1251,7 +1291,7 @@
       "STH Impact Assessment"
     ],
     "resources": [],
-    "source_row": 39
+    "source_row": 40
   },
   {
     "name": "Sporotrichosis",
@@ -1277,7 +1317,7 @@
     "antibody_targets": [],
     "existing_surveys": [],
     "resources": [],
-    "source_row": 40
+    "source_row": 41
   },
   {
     "name": "Syphilis",
@@ -1306,7 +1346,7 @@
     "antibody_targets": [],
     "existing_surveys": [],
     "resources": [],
-    "source_row": 41
+    "source_row": 42
   },
   {
     "name": "Taeniasis",
@@ -1339,7 +1379,7 @@
       "T. solium mapping and monitoring survey"
     ],
     "resources": [],
-    "source_row": 42
+    "source_row": 43
   },
   {
     "name": "Trachoma",
@@ -1393,7 +1433,7 @@
         "url": "https://www.tropicaldata.org/"
       }
     ],
-    "source_row": 43
+    "source_row": 44
   },
   {
     "name": "Tuberculosis",
@@ -1433,7 +1473,7 @@
         "url": "https://cdn.who.int/media/docs/default-source/hq-tuberculosis/national-tb-prevalence-survey-guidance-summary-slides_11july2025.pdf"
       }
     ],
-    "source_row": 44
+    "source_row": 45
   },
   {
     "name": "Tungiasis",
@@ -1468,7 +1508,7 @@
         "url": "https://www.who.int/publications/i/item/9789240051423"
       }
     ],
-    "source_row": 45
+    "source_row": 46
   },
   {
     "name": "West Nile Virus",
@@ -1496,7 +1536,7 @@
     "antibody_targets": [],
     "existing_surveys": [],
     "resources": [],
-    "source_row": 46
+    "source_row": 47
   },
   {
     "name": "Yaws",
@@ -1539,7 +1579,7 @@
         "url": "https://www.who.int/publications/i/item/9789240051423"
       }
     ],
-    "source_row": 47
+    "source_row": 48
   },
   {
     "name": "Yellow Fever",
@@ -1573,7 +1613,7 @@
         "url": "https://iris.who.int/server/api/core/bitstreams/f0240e21-907e-4590-b8e4-2c58afad735f/content"
       }
     ],
-    "source_row": 48
+    "source_row": 49
   },
   {
     "name": "Zika",
@@ -1603,7 +1643,7 @@
     "antibody_targets": [],
     "existing_surveys": [],
     "resources": [],
-    "source_row": 49
+    "source_row": 50
   },
   {
     "name": "Paragonimiasis (Foodborne Trematodiases)",
@@ -1634,6 +1674,6 @@
       "Paragonimiasis monitoring survey"
     ],
     "resources": [],
-    "source_row": 50
+    "source_row": 51
   }
 ]

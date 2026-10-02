@@ -80,6 +80,7 @@
     "Active, driven by vaccine introduction decisions",
     "Active, though largely ad hoc and commissioned on a case-by-case basis",
     "Active, with support from WHO/UNICEF/Gavi",
+    "Inactive",
     "Uncertain"
   ],
   "disease_specimens": [

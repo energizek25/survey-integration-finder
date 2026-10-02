@@ -1,8 +1,8 @@
 window.EXPLORER_DATA = {
-  "generated": "2026-08-20",
-  "source_workbook": "Integrated_Survey_Catalog_TEMPLATE_v7.xlsx",
-  "survey_count": 30,
-  "disease_count": 49,
+  "generated": "2026-10-02",
+  "source_workbook": "Integrated_Survey_Catalog_TEMPLATE_v8.xlsx",
+  "survey_count": 31,
+  "disease_count": 50,
   "surveys": [
     {
       "id": "lymphatic-filariasis-epidemiological-mon",
@@ -164,7 +164,7 @@ window.EXPLORER_DATA = {
       "source_row": 4
     },
     {
-      "id": "schistosomiasis-practical-assessment",
+      "id": "schistosomiasis-practical-assessment-afro",
       "status": "draft",
       "incomplete": false,
       "diseases": [
@@ -173,10 +173,7 @@ window.EXPLORER_DATA = {
       "name": "Schistosomiasis Practical and Precision Assessments",
       "purpose": "To assess the impact of SCH control interventions and determine the appropriate implementation unit for treatment decisions",
       "regions": [
-        "AFRO",
-        "AMRO",
-        "SEARO",
-        "WPRO"
+        "AFRO"
       ],
       "survey_area": "District; sub-district",
       "primary_sampling_units": [
@@ -214,6 +211,56 @@ window.EXPLORER_DATA = {
         }
       ],
       "source_row": 5
+    },
+    {
+      "id": "schistosomiasis-practical-assessment-amro-searo-wpro",
+      "status": "draft",
+      "incomplete": false,
+      "diseases": [
+        "Schistosomiasis"
+      ],
+      "name": "Schistosomiasis Practical and Precision Assessments",
+      "purpose": "To assess the impact of SCH control interventions and determine the appropriate implementation unit for treatment decisions",
+      "regions": [
+        "AMRO",
+        "SEARO",
+        "WPRO"
+      ],
+      "survey_area": "District; sub-district",
+      "primary_sampling_units": [
+        "School",
+        "Community"
+      ],
+      "secondary_sampling_unit": "",
+      "sample_size": "Practical Assessment: 300 children per district (20 children x 15 sites)\nPrecision Assessment: 80 children per sub-district (20 children x 4 sites)",
+      "target_population": "School-aged children",
+      "age_min": 10.0,
+      "age_max": 14.0,
+      "population_bands": [
+        "School-aged children (5-14)"
+      ],
+      "specimens": [
+        "Stool"
+      ],
+      "diagnostics": "S mansoni: Kato-katz\nS japonicum: Kato-katz",
+      "additional_data": "Demographic information; WASH questionnaire",
+      "frequency": "After 5+ rounds of mass drug administration or whenever interested in determining the impact of mass treatment",
+      "timing_considerations": "Conducted ~6 months after the most recent preventive chemotherapy round",
+      "serology_available": "Under development",
+      "antibody_targets": "S. haematobium: SAP1, Sh-quad",
+      "indicator": "Prevalence of infection (any intensity)",
+      "decision_rule": "Continue, reduce or stop MDA relative to the 10% treatment threshold",
+      "steward_funder": "WHO",
+      "funding_status": "Inactive",
+      "last_known_implementation": "",
+      "evidence_checked": "",
+      "resources": [
+        {
+          "title": "Schistosomiasis Practical and Precision Assessment Manual",
+          "url": "https://espen.afro.who.int/tools-resources/advanced-analytical-tools/schistosomiasis-mapper-tool"
+        }
+      ],
+      "source_row": 6
     },
     {
       "id": "schistosomiasis-impact-assessment-model-",
@@ -259,7 +306,7 @@ window.EXPLORER_DATA = {
       "last_known_implementation": "",
       "evidence_checked": "",
       "resources": [],
-      "source_row": 6
+      "source_row": 7
     },
     {
       "id": "malaria-malaria-indicator-survey",
@@ -314,7 +361,7 @@ window.EXPLORER_DATA = {
           "url": "https://dhsprogram.com/methodology/Survey-Types/MIS.cfm"
         }
       ],
-      "source_row": 7
+      "source_row": 8
     },
     {
       "id": "dengue-dengue-serosurveys",
@@ -366,7 +413,7 @@ window.EXPLORER_DATA = {
           "url": "https://iris.who.int/server/api/core/bitstreams/40ee4c67-0abc-4e57-ac31-b536debfb36e/content"
         }
       ],
-      "source_row": 8
+      "source_row": 9
     },
     {
       "id": "measles-rubella-measles-and-rubella-sero",
@@ -422,7 +469,7 @@ window.EXPLORER_DATA = {
           "url": "https://www.technet-21.org/en/resources/guidance/who-guidelines-on-the-use-of-serosurveys-in-support-of-measles-and-rubella-elimination"
         }
       ],
-      "source_row": 9
+      "source_row": 10
     },
     {
       "id": "vaccination-coverage-cluster-surveys-vcc",
@@ -475,7 +522,7 @@ window.EXPLORER_DATA = {
           "url": "https://www.who.int/teams/immunization-vaccines-and-biologicals/immunization-analysis-and-insights/global-monitoring/immunization-coverage/survey-methods"
         }
       ],
-      "source_row": 10
+      "source_row": 11
     },
     {
       "id": "multiple-indicator-cluster-survey-mics-b",
@@ -531,7 +578,7 @@ window.EXPLORER_DATA = {
           "url": "https://mics.unicef.org/"
         }
       ],
-      "source_row": 11
+      "source_row": 12
     },
     {
       "id": "NTD-coverage-survey",
@@ -584,7 +631,7 @@ window.EXPLORER_DATA = {
       "last_known_implementation": "",
       "evidence_checked": "",
       "resources": [],
-      "source_row": 12
+      "source_row": 13
     },
     {
       "id": "Population-based-HIV-impact-assessment",
@@ -632,7 +679,7 @@ window.EXPLORER_DATA = {
       "last_known_implementation": "SiLPHIA 2026 launched in Sierra Leone (17th PHIA country, 26th ICAP-supported survey; ~12,000 households in Western Area Rural and Urban). ICAP's PHIA work sits under a US$50m CDC award. Context: the administration cut ~30% of PEPFAR funding, ~1,700 HIV service sites have closed, though Congress appropriated US$4.8bn for PEPFAR in FY2026. Surveys continue for now but the funding environment is volatile.",
       "evidence_checked": "Aug 2026",
       "resources": [],
-      "source_row": 13
+      "source_row": 14
     },
     {
       "id": "Onchocerciasis-elimination-mapping",
@@ -680,7 +727,7 @@ window.EXPLORER_DATA = {
           "url": "https://www.who.int/publications/i/item/9789240099227"
         }
       ],
-      "source_row": 14
+      "source_row": 15
     },
     {
       "id": "Onchocerciasis-Stop-MDA",
@@ -723,7 +770,7 @@ window.EXPLORER_DATA = {
       "last_known_implementation": "",
       "evidence_checked": "",
       "resources": [],
-      "source_row": 15
+      "source_row": 16
     },
     {
       "id": "soil-transmitted-helminths-school-based-",
@@ -768,7 +815,7 @@ window.EXPLORER_DATA = {
       "last_known_implementation": "",
       "evidence_checked": "",
       "resources": [],
-      "source_row": 16
+      "source_row": 17
     },
     {
       "id": "taeniasis-mapping-and-monitoring-survey",
@@ -815,7 +862,7 @@ window.EXPLORER_DATA = {
       "last_known_implementation": "",
       "evidence_checked": "",
       "resources": [],
-      "source_row": 17
+      "source_row": 18
     },
     {
       "id": "trachoma-impact-survey",
@@ -874,7 +921,7 @@ window.EXPLORER_DATA = {
           "url": "https://www.tandfonline.com/doi/full/10.1080/09286586.2023.2249546"
         }
       ],
-      "source_row": 18
+      "source_row": 19
     },
     {
       "id": "integrated-transmission-assessment-survey",
@@ -918,7 +965,7 @@ window.EXPLORER_DATA = {
       "last_known_implementation": "",
       "evidence_checked": "",
       "resources": [],
-      "source_row": 19
+      "source_row": 20
     },
     {
       "id": "oncho-pre-stop-mda-survey",
@@ -961,7 +1008,7 @@ window.EXPLORER_DATA = {
       "last_known_implementation": "Act to End NTDs East/West ran through 2026 (East extended with +$125M, >$420M over 8 years) before USAID's flagship NTD programme was terminated; commentary in early 2026 warns this risks widening data and treatment gaps. WHO/ESPEN and the END Fund continue, but survey funding is the most exposed line.",
       "evidence_checked": "Aug 2026",
       "resources": [],
-      "source_row": 20
+      "source_row": 21
     },
     {
       "id": "integrated-skin-ntd-survey",
@@ -1019,7 +1066,7 @@ window.EXPLORER_DATA = {
           "url": "https://www.who.int/publications/i/item/9789240051423"
         }
       ],
-      "source_row": 21
+      "source_row": 22
     },
     {
       "id": "tb-national-prevalence-survey",
@@ -1075,7 +1122,7 @@ window.EXPLORER_DATA = {
           "url": "https://cdn.who.int/media/docs/default-source/hq-tuberculosis/national-tb-prevalence-survey-guidance-summary-slides_11july2025.pdf"
         }
       ],
-      "source_row": 22
+      "source_row": 23
     },
     {
       "id": "smart-nutrition-survey",
@@ -1131,7 +1178,7 @@ window.EXPLORER_DATA = {
           "url": "https://smartmethodology.org/wp-content/uploads/2014/11/ENA-Manual.pdf"
         }
       ],
-      "source_row": 23
+      "source_row": 24
     },
     {
       "id": "national-micronutrient-survey",
@@ -1188,7 +1235,7 @@ window.EXPLORER_DATA = {
           "url": "https://iris.who.int/server/api/core/bitstreams/fb06a2b8-e1f1-46e8-92d6-a381d9fec60b/content"
         }
       ],
-      "source_row": 24
+      "source_row": 25
     },
     {
       "id": "who-steps-ncd-survey",
@@ -1247,7 +1294,7 @@ window.EXPLORER_DATA = {
           "url": "https://www.who.int/teams/noncommunicable-diseases/surveillance/systems-tools/steps"
         }
       ],
-      "source_row": 25
+      "source_row": 26
     },
     {
       "id": "gshs-school-student-health-survey",
@@ -1300,7 +1347,7 @@ window.EXPLORER_DATA = {
           "url": "https://www.who.int/teams/noncommunicable-diseases/surveillance/systems-tools/global-school-based-student-health-survey"
         }
       ],
-      "source_row": 26
+      "source_row": 27
     },
     {
       "id": "gyts-youth-tobacco-survey",
@@ -1352,7 +1399,7 @@ window.EXPLORER_DATA = {
           "url": "https://www.who.int/teams/noncommunicable-diseases/surveillance/systems-tools/global-youth-tobacco-survey/methodology"
         }
       ],
-      "source_row": 27
+      "source_row": 28
     },
     {
       "id": "hepatitis-b-child-serosurvey",
@@ -1406,7 +1453,7 @@ window.EXPLORER_DATA = {
           "url": "https://www.ncbi.nlm.nih.gov/books/NBK561131/"
         }
       ],
-      "source_row": 28
+      "source_row": 29
     },
     {
       "id": "polio-seroprevalence-survey",
@@ -1451,7 +1498,7 @@ window.EXPLORER_DATA = {
       "last_known_implementation": "Pakistan serosurveys of children 6-23 months across 44 high-risk districts (2022-23, 20,680 children) published 2025; repeated survey rounds reported through 2025. Nigeria nOPV2 seroprevalence survey published 2025.",
       "evidence_checked": "Aug 2026",
       "resources": [],
-      "source_row": 29
+      "source_row": 30
     },
     {
       "id": "post-campaign-coverage-survey",
@@ -1505,7 +1552,7 @@ window.EXPLORER_DATA = {
           "url": "https://iris.who.int/server/api/core/bitstreams/f0240e21-907e-4590-b8e4-2c58afad735f/content"
         }
       ],
-      "source_row": 30
+      "source_row": 31
     },
     {
       "id": "demographic-health-survey",
@@ -1569,7 +1616,7 @@ window.EXPLORER_DATA = {
           "url": "https://www.prb.org/news/charting-a-path-forward-for-the-demographic-and-health-surveys-program/"
         }
       ],
-      "source_row": 31
+      "source_row": 32
     }
   ],
   "diseases": [
@@ -2753,10 +2800,7 @@ window.EXPLORER_DATA = {
     {
       "name": "Schistosomiasis",
       "regions": [
-        "AFRO",
-        "AMRO",
-        "SEARO",
-        "WPRO"
+        "AFRO"
       ],
       "specimens": [
         "Urine",
@@ -2795,6 +2839,49 @@ window.EXPLORER_DATA = {
       "source_row": 38
     },
     {
+      "name": "Schistosomiasis",
+      "regions": [
+        "AMRO",
+        "SEARO",
+        "WPRO"
+      ],
+      "specimens": [
+        "Stool",
+        "Finger prick blood"
+      ],
+      "diagnostics": [
+        "S mansoni: Kato-katz, POC-CCA, or CAA",
+        "S japonicum: Kato-katz"
+      ],
+      "age_min": 5.0,
+      "age_max": 100.0,
+      "population_bands": [
+        "School-aged children (5-14)",
+        "Adolescents (15-19)",
+        "Adults (20+)"
+      ],
+      "decision_areas": [
+        "District; sub-district",
+        "Flexible - typically multiple districts or nationwide",
+        "District or multiple districts"
+      ],
+      "antibody_targets": [
+        "S. mansoni: Sm-25, Sm29, CD63-like, Calumenin B;"
+      ],
+      "existing_surveys": [
+        "Schistosomiasis Practical and Precision Assessments",
+        "Impact Assessment (Model-based geostatistics or other cluster methodology)",
+        "Coverage Evaluation Survey"
+      ],
+      "resources": [
+        {
+          "title": "Schistosomiasis Practical and Precision Assessments: Schistosomiasis Practical and Precision Assessment Manual",
+          "url": "https://espen.afro.who.int/tools-resources/advanced-analytical-tools/schistosomiasis-mapper-tool"
+        }
+      ],
+      "source_row": 39
+    },
+    {
       "name": "Soil-transmitted helminthiasis",
       "regions": [
         "AFRO",
@@ -2825,7 +2912,7 @@ window.EXPLORER_DATA = {
         "STH Impact Assessment"
       ],
       "resources": [],
-      "source_row": 39
+      "source_row": 40
     },
     {
       "name": "Sporotrichosis",
@@ -2851,7 +2938,7 @@ window.EXPLORER_DATA = {
       "antibody_targets": [],
       "existing_surveys": [],
       "resources": [],
-      "source_row": 40
+      "source_row": 41
     },
     {
       "name": "Syphilis",
@@ -2880,7 +2967,7 @@ window.EXPLORER_DATA = {
       "antibody_targets": [],
       "existing_surveys": [],
       "resources": [],
-      "source_row": 41
+      "source_row": 42
     },
     {
       "name": "Taeniasis",
@@ -2913,7 +3000,7 @@ window.EXPLORER_DATA = {
         "T. solium mapping and monitoring survey"
       ],
       "resources": [],
-      "source_row": 42
+      "source_row": 43
     },
     {
       "name": "Trachoma",
@@ -2967,7 +3054,7 @@ window.EXPLORER_DATA = {
           "url": "https://www.tropicaldata.org/"
         }
       ],
-      "source_row": 43
+      "source_row": 44
     },
     {
       "name": "Tuberculosis",
@@ -3007,7 +3094,7 @@ window.EXPLORER_DATA = {
           "url": "https://cdn.who.int/media/docs/default-source/hq-tuberculosis/national-tb-prevalence-survey-guidance-summary-slides_11july2025.pdf"
         }
       ],
-      "source_row": 44
+      "source_row": 45
     },
     {
       "name": "Tungiasis",
@@ -3042,7 +3129,7 @@ window.EXPLORER_DATA = {
           "url": "https://www.who.int/publications/i/item/9789240051423"
         }
       ],
-      "source_row": 45
+      "source_row": 46
     },
     {
       "name": "West Nile Virus",
@@ -3070,7 +3157,7 @@ window.EXPLORER_DATA = {
       "antibody_targets": [],
       "existing_surveys": [],
       "resources": [],
-      "source_row": 46
+      "source_row": 47
     },
     {
       "name": "Yaws",
@@ -3113,7 +3200,7 @@ window.EXPLORER_DATA = {
           "url": "https://www.who.int/publications/i/item/9789240051423"
         }
       ],
-      "source_row": 47
+      "source_row": 48
     },
     {
       "name": "Yellow Fever",
@@ -3147,7 +3234,7 @@ window.EXPLORER_DATA = {
           "url": "https://iris.who.int/server/api/core/bitstreams/f0240e21-907e-4590-b8e4-2c58afad735f/content"
         }
       ],
-      "source_row": 48
+      "source_row": 49
     },
     {
       "name": "Zika",
@@ -3177,7 +3264,7 @@ window.EXPLORER_DATA = {
       "antibody_targets": [],
       "existing_surveys": [],
       "resources": [],
-      "source_row": 49
+      "source_row": 50
     },
     {
       "name": "Paragonimiasis (Foodborne Trematodiases)",
@@ -3208,7 +3295,7 @@ window.EXPLORER_DATA = {
         "Paragonimiasis monitoring survey"
       ],
       "resources": [],
-      "source_row": 50
+      "source_row": 51
     }
   ],
   "facets": {
@@ -3293,6 +3380,7 @@ window.EXPLORER_DATA = {
       "Active, driven by vaccine introduction decisions",
       "Active, though largely ad hoc and commissioned on a case-by-case basis",
       "Active, with support from WHO/UNICEF/Gavi",
+      "Inactive",
       "Uncertain"
     ],
     "disease_specimens": [

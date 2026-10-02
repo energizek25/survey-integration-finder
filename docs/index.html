@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Survey Integration Finder — one survey, many answers</title>
+<title>Integrated Disease Assessment Explorer — one survey, many answers</title>
 <style>
   :root{
     --ink:#12303b; --muted:#5b7683; --line:#dde6ea; --bg:#eef3f8; --card:#fff;
@@ -126,7 +126,7 @@
 <body>
 <div id="banner"></div>
 <header>
-  <h1>Survey Integration Finder</h1>
+  <h1>Integrated Disease Assessment Explorer</h1>
   <p class="tagline">One survey, many answers</p>
   <p>Find opportunities to integrate disease assessments — either by joining a survey that is already funded, or by adding assessments to a survey you are about to run.</p>
 </header>
@@ -580,7 +580,7 @@ el("mode-add").addEventListener("click", () => setMode("add"));
   const a = el("contact-link");
   a.textContent = FEEDBACK_EMAIL;
   a.href = "mailto:" + FEEDBACK_EMAIL +
-    "?subject=" + encodeURIComponent("Survey Integration Finder — edits and suggestions");
+    "?subject=" + encodeURIComponent("Integrated Disease Assessment Explorer — edits and suggestions");
 })();
 
 // ---------- review banner ----------
@@ -588,7 +588,7 @@ if(SHOW_BANNER){
   const link = FEEDBACK_FORM
     ? `<a href="${FEEDBACK_FORM}" target="_blank" rel="noopener">Send feedback</a>`
     : (FEEDBACK_EMAIL
-        ? `<a href="mailto:${FEEDBACK_EMAIL}?subject=Survey%20Integration%20Finder%20feedback">Send feedback</a>`
+        ? `<a href="mailto:${FEEDBACK_EMAIL}?subject=Integrated%20Disease%20Assessment%20Explorer%20feedback">Send feedback</a>`
         : "");
   el("banner").innerHTML = `<span>${BANNER_TEXT}</span>${link}`;
 } else {
