@@ -1,4 +1,4 @@
-# Survey Integration Finder
+# Integrated Disease Assessment Explorer (IDEA Tool)
 
 **One survey, many answers.**
 
